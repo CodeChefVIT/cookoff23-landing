@@ -1,11 +1,11 @@
 import React from "react";
 
-const About = () => {
+const AboutMask = () => {
   return (
-    <div className="flex flex-col justify-between items-center py-16 px-36 h-[100vh] w-[100vw] text-grey">
+    <div className="flex flex-col justify-between items-center py-16 px-36 h-[100vh] w-[100vw] text-black">
       <p className="text-5xl font-semibold tracking-wider">ABOUT</p>
       <p className="text-justify text-4xl tracking-wide font-bold leading-relaxed">
-        Cook off is <span className="text-orange">CodeChef VIT</span>’s flagship
+        Cook off is <span className="text-grey">CodeChef VIT</span>’s flagship
         competitive coding event that tests the coding skills of tech
         enthusiasts across the country. The event provides a platform for
         participants to develop their competitive coding skills and test their
@@ -23,4 +23,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutMask;
