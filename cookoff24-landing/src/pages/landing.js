@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import FixedNav from '@/components/FixedNav'
 import About from '@/components/About'
@@ -14,6 +15,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
+    <>
+    <Head>
+        <title>Cook-off 8.0</title>
+        <link rel="icon" href="/Favicon.png" />
+      </Head>
     <main>
       <FixedNav />
       <About />
@@ -26,5 +32,6 @@ export default function Home() {
       <OtherEvents />
       <Socials />
     </main>
+    </>
   )
 }
