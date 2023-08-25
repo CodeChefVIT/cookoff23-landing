@@ -1,5 +1,5 @@
-// "use client";
-// import useMousePosition from "../utils/useMousePosition";
+"use client";
+import useMousePosition from "../utils/useMousePosition";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import FixedNav from "@/components/FixedNav";
@@ -14,28 +14,45 @@ import Socials from "@/components/Socials";
 import Welcome from "@/components/Welcome";
 // import styles from "../styles/page.module.css";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import AboutMask from "@/components/AboutMask";
+import { useState, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  // const [isHovered, setIsHovered] = useState(false);
-  // const { x, y } = useMousePosition();
-  // const size = isHovered ? 400 : 240;
+  const [isHovered, setIsHovered] = useState(false);
+  const [isHoveredOnSmall, setIsHoveredOnSmall] = useState(false);
+
+  const { x, y } = useMousePosition();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const size = isHovered ? 400 : isHoveredOnSmall ? 100 : 40;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY || window.pageYOffset);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <main 
-    // className={styles.main}
-    >
-      <motion.div
-        // animate={{
-        //   WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
-        //   WebkitMaskSize: `${size}px`,
-        // }}
-        // transition={{ type: "tween", ease: "backOut", duration:0.5}}
-        // className={styles.mask}
-      >
+    <main className="h-[850vh] w-[100vw] relative  cursor-default">
+      <div className="absolute">
+        <FixedNav />
+        <Welcome />
+        <About />
+        <Timeline />
+        <Banner />
+        <Prizes />
+        <Faqs />
+        <Prizes />
+        <RegisterNow />
+        <OtherEvents />
+        <Socials />
+      </div>
+      <motion.div>
         <FixedNav />
         <Welcome />
         <About />
@@ -48,19 +65,6 @@ export default function Home() {
         <OtherEvents />
         <Socials />
       </motion.div>
-      {/* <div className={styles.body}>
-        <FixedNav />
-        <Welcome />
-        <About />
-        <Timeline />
-        <Banner />
-        <Prizes />
-        <Faqs />
-        <Prizes />
-        <RegisterNow />
-        <OtherEvents />
-        <Socials />
-      </div> */}
     </main>
   );
 }

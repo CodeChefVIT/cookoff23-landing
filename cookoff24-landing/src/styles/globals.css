@@ -16,6 +16,12 @@ body {
   
 }
 
+.no-selection{
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+}
+
 .one {
   -webkit-mask-image: url(../assets/mask.svg);
   mask-image:url(../assets/mask.svg);
