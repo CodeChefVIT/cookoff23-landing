@@ -16,3 +16,16 @@ body {
   
 }
 
+.one {
+  -webkit-mask-image: url(../assets/mask.svg);
+  mask-image:url(../assets/mask.svg);
+
+  -webkit-mask-poisition: top left;
+  mask-position: top left;
+
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+
+  -webkit-mask-size: 250px 250px;
+  mask-size: 250px 250px
+}

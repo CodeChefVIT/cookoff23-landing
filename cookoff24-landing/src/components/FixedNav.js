@@ -5,18 +5,11 @@ import cclogo from "../assets/cclogo.svg";
 import SocialHandles from "./NavbarComps/SocialHandles";
 import { motion } from "framer-motion";
 
-
-const FixedNav = () =>{
+const FixedNav = () => {
   return (
-    <div
-      className="fixed h-screen w-screen text-orange"
-      
-    >
+    <div className="fixed h-screen w-screen text-orange">
       <div className="flex justify-between p-12 ">
-        <div
-          className="h-16 w-auto cursor-pointer logo"
-          
-        >
+        <div className="h-16 w-auto cursor-pointer logo">
           <Image className="h-16 w-auto" src={cclogo} alt="CC Logo" />
         </div>
         <Options />
