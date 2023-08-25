@@ -7,6 +7,7 @@ import React from "react";
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
+  const [innerHeight, setInnerHeight] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
   const size = isHovered ? 400 : 40;
 
@@ -20,6 +21,12 @@ const About = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    setInnerHeight(window.innerHeight);
+  }
+  , []);
+
   return (
     <div className="h-[100vh] w-[100vw] relative overflow-hidden cursor-default">
       <div className="absolute body flex flex-col justify-between items-center gap-7 py-16 px-36 h-[100vh]   text-grey">
@@ -49,7 +56,7 @@ const About = () => {
       <motion.div
         animate={{
           WebkitMaskPosition: `${x - size / 2}px ${
-            y + scrollPosition - size / 2 - window.innerHeight
+            y + scrollPosition - size / 2 - innerHeight
           }px`,
           WebkitMaskSize: `${size}px`,
         }}
