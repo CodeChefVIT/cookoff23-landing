@@ -53,7 +53,7 @@ export default function Home() {
         <Socials />
       </div>
       <motion.div>
-        <FixedNav />
+        {/* <FixedNav /> */}
         <Welcome />
         <About />
         <Timeline />
