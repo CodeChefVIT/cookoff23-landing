@@ -10,7 +10,7 @@ const AboutMask = () => {
   } = useAppContext();
   return (
 
-      <div className="flex flex-col justify-center items-left gap-[8rem] py-16 px-36 h-[100vh]  text-grey bg-orange relative  cursor-default">
+      <div className="flex flex-col justify-center items-stretch gap-[8rem] py-16 px-36 h-[100vh] md:px-5   text-grey bg-orange relative  cursor-default">
         <p
           onMouseEnter={() => {
             setIsHoveredOnSmall(true);
@@ -29,7 +29,7 @@ const AboutMask = () => {
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="text-left text-4xl tracking-wide font-bold leading-relaxed"
+          className="text-left text-4xl tracking-wide font-bold leading-relaxed lg:text-2xl md:text-justify md:text-lg md:tracking-tight md:font-normal"
         >
           Cook off is <span className="text-black">CodeChef VIT</span>’s
           flagship competitive coding event that tests the coding skills of tech

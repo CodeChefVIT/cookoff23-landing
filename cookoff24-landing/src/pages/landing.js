@@ -54,7 +54,6 @@ export default function Home() {
         <Banner />
         <Prizes />
         <Faqs />
-        <Prizes />
         <RegisterNow />
         <OtherEvents />
         <Socials />
