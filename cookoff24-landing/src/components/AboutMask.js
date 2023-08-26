@@ -6,6 +6,7 @@ import useMousePosition from "@/utils/useMousePosition";
 const AboutMask = () => {
   const { setIsHovered, setIsHoveredOnSmall } = useAppContext();
   return (
+
     <div className="flex flex-col justify-center items-left gap-[8rem] py-16 px-36 h-[100vh] text-grey bg-orange relative  cursor-default">
       <p
         onMouseEnter={() => {
@@ -35,6 +36,7 @@ const AboutMask = () => {
         hope to broaden the horizons of the participants
       </p>
     </div>
+
     // </motion.div>
   );
 };
