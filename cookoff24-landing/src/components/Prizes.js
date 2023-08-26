@@ -10,11 +10,11 @@ const Prizes = () => {
   };
   return (
     <div className="h-[100vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16">
-      <p className="text-lg font-normal tracking-[0.15rem] px-36">PRIZES</p>
+      <p className="text-lg font-normal tracking-[0.15rem] px-36 md:px-0">PRIZES</p>
       <div>
         <Awards
           title="FIRST"
-          content="You’ll get like 1.5 Lakhs in cash, damm that’s a lot of money. What
+          content="You’ll get like 1.5 Lakhs in cash, damm that's a lot of money. What
             are you going to do with all? I’m gonna buy myself some doge."
         />
         <Awards
@@ -23,7 +23,7 @@ const Prizes = () => {
             are you going to do with all? I’m gonna buy myself some doge."
         />
         <Awards
-          title="THRID"
+          title="THIRD"
           content="You’ll get like 1.5 Lakhs in cash, damm that’s a lot of money. What
             are you going to do with all? I’m gonna buy myself some doge."
         />

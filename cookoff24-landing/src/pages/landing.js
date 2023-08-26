@@ -46,7 +46,7 @@ export default function Home() {
   const { x, y } = useMousePosition();
 
   return (
-    <main className="h-[850vh] w-[100vw] relative  cursor-default">
+    <main className="h-[850vh] w-[100vw] relative cursor-default">
       <div className="absolute">
         <FixedNav />
         <Welcome />
@@ -55,7 +55,6 @@ export default function Home() {
         <Banner />
         <Prizes />
         <Faqs />
-        <Prizes />
         <RegisterNow />
         <OtherEvents />
         <Socials />
@@ -63,7 +62,8 @@ export default function Home() {
       <motion.div
         animate={{
           WebkitMaskPosition: `${x - size / 2}px ${
-            y - size/2 + scrollPosition}px`,
+            y - size / 2 + scrollPosition
+          }px`,
           WebkitMaskSize: `${size}px`,
         }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
