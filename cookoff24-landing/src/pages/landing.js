@@ -12,6 +12,7 @@ import RegisterNow from "@/components/RegisterNow";
 import OtherEvents from "@/components/OtherEvents";
 import Socials from "@/components/Socials";
 import Welcome from "@/components/Welcome";
+import { useAppContext } from "@/context/appContext";
 // import styles from "../styles/page.module.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -19,13 +20,8 @@ import { useState, useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHoveredOnSmall, setIsHoveredOnSmall] = useState(false);
 
-  const { x, y } = useMousePosition();
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const size = isHovered ? 400 : isHoveredOnSmall ? 100 : 40;
-
+  const {setScrollPosition, setInnerHeight} = useAppContext();
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY || window.pageYOffset);
@@ -36,7 +32,10 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  useEffect(() => {
+    setInnerHeight(window.innerHeight);
+  }
+  , []);
   return (
     <main className="h-[850vh] w-[100vw] relative  cursor-default">
       <div className="absolute">

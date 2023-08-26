@@ -3,32 +3,47 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import useMousePosition from "@/utils/useMousePosition";
 import React from "react";
+import { useAppContext } from "@/context/appContext";
 
 const About = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHoveredOnSmall, setIsHoveredOnSmall] = useState(false);
 
+  /*these states help manage the size of cursor*/
+  // const [isHovered, setIsHovered] = useState(false);
+  // const [isHoveredOnSmall, setIsHoveredOnSmall] = useState(false);
+
+  // const [innerHeight, setInnerHeight] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const size = isHovered ? 400 : isHoveredOnSmall ? 100 : 40;
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollPosition(window.scrollY || window.pageYOffset);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   setInnerHeight(window.innerHeight);
+  // }
+  // , []);
   const { x, y } = useMousePosition();
-  const [innerHeight, setInnerHeight] = useState(0);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const size = isHovered ? 400 : isHoveredOnSmall ? 100 : 40;
+  const {
+    isHovered,
+    setIsHovered,
+    isHoveredOnSmall,
+    setIsHoveredOnSmall,
+    innerHeight,
+    setInnerHeight,
+    scrollPosition,
+    setScrollPosition,
+    size
+  } = useAppContext();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY || window.pageYOffset);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    setInnerHeight(window.innerHeight);
-  }
-  , []);
-
+  //basically for cursor we need to keep track of it's size, it's mouse position and the scroll position
   return (
     <div className="h-[100vh] w-[100vw] relative  cursor-default">
       <div className="absolute body flex flex-col justify-center items-left gap-[8rem] py-16 px-36 h-[100vh]   text-grey">
