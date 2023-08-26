@@ -6,8 +6,7 @@ import useMousePosition from "@/utils/useMousePosition";
 const AboutMask = () => {
   const { setIsHovered, setIsHoveredOnSmall } = useAppContext();
   return (
-
-    <div className="flex flex-col justify-center items-left gap-[8rem] py-16 px-36 h-[100vh] text-grey bg-orange relative  cursor-default">
+    <div className="flex flex-col justify-center items-left gap-[8rem] py-16 h-[100vh] text-grey bg-orange relative cursor-default">
       <p
         onMouseEnter={() => {
           setIsHoveredOnSmall(true);
@@ -15,7 +14,7 @@ const AboutMask = () => {
         onMouseLeave={() => {
           setIsHoveredOnSmall(false);
         }}
-        className="text-lg font-normal tracking-[0.15rem]"
+        className="text-lg font-normal tracking-[7px]"
       >
         ABOUT EVENT
       </p>
@@ -26,7 +25,8 @@ const AboutMask = () => {
         onMouseLeave={() => {
           setIsHovered(false);
         }}
-        className="text-left text-4xl tracking-wide font-bold leading-relaxed"
+        id="proxima"
+        className="text-justify text-4xl tracking-wide font-bold leading-relaxed mx-[13%] md:mx-[10%]"
       >
         Cook off is <span className="text-black">CodeChef VIT</span>&apos;s
         flagship competitive coding event that tests the coding skills of tech

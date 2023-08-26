@@ -2,7 +2,10 @@ import React from "react";
 
 const Options = () => {
   return (
-    <div className=" flex flex-col text-[#AA9E8B] text-sm font-bold tracking-wider gap-2 items-end">
+    <div
+      id="proxima"
+      className=" flex flex-col text-[#AA9E8B] text-sm font-bold tracking-wider gap-2 items-end"
+    >
       <div className="group transition ease-in-out">
         <p
           className=" absolute origin-top transition-transform duration-200 ease-in-out group-hover:scale-y-0"

@@ -64,7 +64,7 @@ const Faqs = ({ question, answer }) => {
               <path d="M27.6614 72.3414V0.15553H45.9118V72.3414H27.6614ZM0.693695 45.3736V27.1233H72.8795V45.3736H0.693695Z" />
             </motion.svg>
           </div>
-          <motion.div className="text-[18px] text-[#0d0d0d] font-semibold mt-3 ml-32">
+          <motion.div className="text-[18px] text-[#0d0d0d] font-semibold mt-3 ml-[138px] md:ml-[80px]">
             {answer}
           </motion.div>
         </div>

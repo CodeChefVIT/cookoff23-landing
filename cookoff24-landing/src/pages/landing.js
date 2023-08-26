@@ -48,10 +48,10 @@ export default function Home() {
         <About />
         <Timeline />
         <Banner />
-        <Prizes />
-        <Faqs />
         <RegisterNow />
+        <Prizes />
         <OtherEvents />
+        <Faqs />
         <Socials />
       </div>
       <motion.div
