@@ -8,10 +8,10 @@ import twitter from "../../assets/twitter.svg";
 const SocialHandles = () => {
   return (
     <div className="flex flex-col items-center gap-7">
-      <Image src={githubmark} />
-      <Image src={insta} />
-      <Image src={twitter} />
-      <Image src={linkedin} />
+      <Image src={githubmark}  alt="img"/>
+      <Image src={insta} alt="img" />
+      <Image src={twitter}  alt="img"/>
+      <Image src={linkedin}  alt="img"/>
     </div>
   );
 };
