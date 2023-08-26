@@ -76,7 +76,7 @@ const index = () => {
       window.removeEventListener("click", clicked);
     };
   }, []);
-
+console.log(hasClicked)
   
   return (
     <>
@@ -90,8 +90,9 @@ const index = () => {
         {
           isDesktop &&
          <motion.div
-          className={`w-1/3 absolute h-screen left-10 break-words justify-items-center ${
-            hasClicked ? "text-[90px]" : "text-9xl"
+          // className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center text-9xl font-bold text-black`}
+          className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center ${
+            hasClicked ? "text-[87px]" : "text-9xl"
           } font-bold text-black`}
           onMouseEnter={() => {
             setCurrentVariant("notDefault");
@@ -145,7 +146,7 @@ const index = () => {
       { isDesktop &&
        <motion.div
           className={`w-1/3 absolute h-screen right-10 break-words justify-items-center ${
-            hasClicked ? "text-[95px]" : "text-9xl"
+            hasClicked ? "text-[87px]" : "text-9xl"
           } font-bold text-black`}
           onMouseEnter={() => {
             setCurrentVariant("notDefault");
