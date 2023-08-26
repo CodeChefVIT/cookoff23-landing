@@ -14,7 +14,7 @@ const Prizes = () => {
       <div>
         <Awards
           title="FIRST"
-          content="You’ll get like 1.5 Lakhs in cash, damm that’s a lot of money. What
+          content="You’ll get like 1.5 Lakhs in cash, damm that's a lot of money. What
             are you going to do with all? I’m gonna buy myself some doge."
         />
         <Awards
