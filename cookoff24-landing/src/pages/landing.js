@@ -17,7 +17,7 @@ import { useAppContext } from "@/context/appContext";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AboutMask from "@/components/AboutMask";
-import WindowMask from "@/components/WindowMask";
+import WelcomeMask from "@/components/WelcomeMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +28,7 @@ export default function Home() {
     setScrollPosition,
     size
   } = useAppContext();
+  console.log(size)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,9 +67,9 @@ export default function Home() {
           WebkitMaskSize: `${size}px`,
         }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
-        className="mask-content one "
+        className="one mask-content -z-30"
       >
-        <WindowMask />
+        <WelcomeMask />
         <AboutMask />
       </motion.div>
     </main>

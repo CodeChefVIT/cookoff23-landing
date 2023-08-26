@@ -7,7 +7,7 @@ export const AppProvider = ({ children }) => {
   const [isHoveredOnSmall, setIsHoveredOnSmall] = useState(false);
   const [innerHeight, setInnerHeight] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const size = isHovered ? 400 : isHoveredOnSmall ? 100 : 40;
+  const size = isHovered ? 400 : isHoveredOnSmall ? 150 : 40;
 
   const contextValues = {
     isHovered,
