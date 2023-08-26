@@ -12,19 +12,22 @@ import RegisterNow from "@/components/RegisterNow";
 import OtherEvents from "@/components/OtherEvents";
 import Socials from "@/components/Socials";
 import Welcome from "@/components/Welcome";
+import { useAppContext } from "@/context/appContext";
 // import styles from "../styles/page.module.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import AboutMask from "@/components/AboutMask";
+import WindowMask from "@/components/WindowMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHoveredOnSmall, setIsHoveredOnSmall] = useState(false);
-
-  const { x, y } = useMousePosition();
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const size = isHovered ? 400 : isHoveredOnSmall ? 100 : 40;
+  const {
+    setInnerHeight,
+    scrollPosition,
+    setScrollPosition,
+    size
+  } = useAppContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +39,10 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  useEffect(() => {
+    setInnerHeight(window.innerHeight);
+  }, []);
+  const { x, y } = useMousePosition();
 
   return (
     <main className="h-[850vh] w-[100vw] relative  cursor-default">
@@ -52,18 +59,17 @@ export default function Home() {
         <OtherEvents />
         <Socials />
       </div>
-      <motion.div>
-        {/* <FixedNav /> */}
-        <Welcome />
-        <About />
-        <Timeline />
-        <Banner />
-        <Prizes />
-        <Faqs />
-        <Prizes />
-        <RegisterNow />
-        <OtherEvents />
-        <Socials />
+      <motion.div
+        animate={{
+          WebkitMaskPosition: `${x - size / 2}px ${
+            y - size/2 + scrollPosition}px`,
+          WebkitMaskSize: `${size}px`,
+        }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
+        className="mask-content one "
+      >
+        <WindowMask />
+        <AboutMask />
       </motion.div>
     </main>
   );
