@@ -1,9 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import useMousePosition from "@/utils/useMousePosition";
 import React from "react";
 import { useAppContext } from "@/context/appContext";
+import { motion } from "framer-motion";
+import useMousePosition from "@/utils/useMousePosition";
 
 const About = () => {
 
@@ -46,7 +45,7 @@ const About = () => {
   //basically for cursor we need to keep track of it's size, it's mouse position and the scroll position
   return (
     <div className="h-[100vh] w-[100vw] relative  cursor-default">
-      <div className="absolute body flex flex-col justify-center items-left gap-[8rem] py-16 px-36 h-[100vh]   text-grey">
+      <div className="body flex flex-col justify-center items-left gap-[8rem] py-16 px-36 h-[100vh]   text-grey">
         <p className="text-lg font-normal tracking-[0.15rem] ">ABOUT EVENT</p>
         <p className="text-left text-4xl tracking-wide font-bold leading-relaxed  sm:text-2xl sm:tracking-wide sm:font-semibold">
           Cook off is <span className="text-orange">CodeChef VIT</span>’s
@@ -57,7 +56,7 @@ const About = () => {
           hope to broaden the horizons of the participants.
         </p>
       </div>
-      <motion.div
+      {/* <motion.div
         animate={{
           WebkitMaskPosition: `${x - size / 2}px ${
             y + scrollPosition - size / 2 - innerHeight
@@ -94,7 +93,7 @@ const About = () => {
           abilities. Cook Off 7.0 will be the seventh edition through which we
           hope to broaden the horizons of the participants
         </p>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

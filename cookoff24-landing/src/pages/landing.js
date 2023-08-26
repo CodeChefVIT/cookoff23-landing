@@ -16,12 +16,19 @@ import { useAppContext } from "@/context/appContext";
 // import styles from "../styles/page.module.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import AboutMask from "@/components/AboutMask";
+import WindowMask from "@/components/WindowMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const {
+    setInnerHeight,
+    scrollPosition,
+    setScrollPosition,
+    size
+  } = useAppContext();
 
-  const {setScrollPosition, setInnerHeight} = useAppContext();
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY || window.pageYOffset);
@@ -34,8 +41,9 @@ export default function Home() {
   }, []);
   useEffect(() => {
     setInnerHeight(window.innerHeight);
-  }
-  , []);
+  }, []);
+  const { x, y } = useMousePosition();
+
   return (
     <main className="h-[850vh] w-[100vw] relative  cursor-default">
       <div className="absolute">
@@ -51,18 +59,17 @@ export default function Home() {
         <OtherEvents />
         <Socials />
       </div>
-      <motion.div>
-        {/* <FixedNav /> */}
-        <Welcome />
-        <About />
-        <Timeline />
-        <Banner />
-        <Prizes />
-        <Faqs />
-        <Prizes />
-        <RegisterNow />
-        <OtherEvents />
-        <Socials />
+      <motion.div
+        animate={{
+          WebkitMaskPosition: `${x - size / 2}px ${
+            y - size/2 + scrollPosition}px`,
+          WebkitMaskSize: `${size}px`,
+        }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
+        className="mask-content one "
+      >
+        <WindowMask />
+        <AboutMask />
       </motion.div>
     </main>
   );
