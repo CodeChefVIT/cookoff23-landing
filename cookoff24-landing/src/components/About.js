@@ -44,9 +44,11 @@ const About = () => {
   //basically for cursor we need to keep track of it's size, it's mouse position and the scroll position
   return (
     <div className="h-[100vh] w-[100vw] relative  cursor-default ">
-      <div className="body flex flex-col justify-center items-stretch gap-[8rem] py-16 px-36 h-[100vh] md:px-5   text-grey">
-
-        <p className="text-left text-4xl tracking-wide font-bold leading-relaxed  sm:text-2xl sm:tracking-wide sm:font-semibold">
+      <div className="body mx-[13%] md:mx-[10%] flex flex-col justify-center items-stretch gap-[8rem] py-16 h-[100vh] text-grey">
+        <p
+          id="proxima"
+          className="text-justify text-4xl tracking-wide font-bold leading-relaxed sm:text-2xl sm:tracking-wide sm:font-semibold"
+        >
           Cook off is <span className="text-orange">CodeChef VIT</span>&apos;s
           flagship competitive coding event that tests the coding skills of tech
           enthusiasts across the country. The event provides a platform for
