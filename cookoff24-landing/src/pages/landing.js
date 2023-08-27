@@ -19,6 +19,7 @@ import { useState, useEffect } from "react";
 import AboutMask from "@/components/AboutMask";
 import WelcomeMask from "@/components/WelcomeMask";
 import TimelineMask from "@/components/TimelineMask";
+import FixedNavMask from "@/components/FixedNavMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,6 +67,7 @@ export default function Home() {
         transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
         className="one mask-content -z-30 sm:hidden"
       >
+        <FixedNavMask />
         <WelcomeMask />
         <AboutMask />
         <TimelineMask />
