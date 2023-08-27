@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 import Link from "next/link";
 
 const index = () => {
-  const isDesktop = useMediaQuery("(min-width: 840px)");
+  const isDesktop = useMediaQuery("(min-width: 965px)");
   /* Cursor following div states*/
 
   // I want to make a state to store the current position of cursor
@@ -76,8 +76,8 @@ const index = () => {
       window.removeEventListener("click", clicked);
     };
   }, []);
-console.log(hasClicked)
-  
+  console.log(hasClicked);
+
   return (
     <>
       <Head>
@@ -87,25 +87,24 @@ console.log(hasClicked)
 
       {/* body container */}
       <div className="h-[100vh] w-[100vw] text-grey flex justify-center justify-items-center no-selection">
-        {
-          isDesktop &&
-         <motion.div
-          // className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center text-9xl font-bold text-black`}
-          className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center ${
-            hasClicked ? "text-[87px]" : "text-9xl"
-          } font-bold text-black`}
-          onMouseEnter={() => {
-            setCurrentVariant("notDefault");
-          }}
-          onMouseLeave={() => {
-            setCurrentVariant("default");
-          }}
-        >
-          {hasClicked
-            ? "LOOK HOW THEY BUTCHERED MY BOY"
-            : "DO NOT DARE DRAG OUR CHEF"}
-        </motion.div>
-}
+        {isDesktop && (
+          <motion.div
+            // className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center text-9xl font-bold text-black`}
+            className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center ${
+              hasClicked ? "text-[87px]" : "text-9xl"
+            } font-bold text-black`}
+            onMouseEnter={() => {
+              setCurrentVariant("notDefault");
+            }}
+            onMouseLeave={() => {
+              setCurrentVariant("default");
+            }}
+          >
+            {hasClicked
+              ? "LOOK HOW THEY BUTCHERED MY BOY"
+              : "DO NOT DARE DRAG OUR CHEF"}
+          </motion.div>
+        )}
         {/* main flex */}
         <div className="flex flex-col justify-center justify-items-center gap-36 ">
           {/* icon */}
@@ -137,29 +136,31 @@ console.log(hasClicked)
         </div>
 
         {/* cursor div */}
-        <motion.div
-          className="bg-orange w-10 h-10 fixed rounded-full left-0 top-0 -z-10"
-          variants={cursorVariants}
-          // animate="default"
-          animate={currentVaraint}
-        />
-      { isDesktop &&
-       <motion.div
-          className={`w-1/3 absolute h-screen right-10 break-words justify-items-center ${
-            hasClicked ? "text-[87px]" : "text-9xl"
-          } font-bold text-black`}
-          onMouseEnter={() => {
-            setCurrentVariant("notDefault");
-          }}
-          onMouseLeave={() => {
-            setCurrentVariant("default");
-          }}
-        >
-          {hasClicked
-            ? "LOOK HOW THEY BUTCHERED MY BOY"
-            : "DO NOT DARE DRAG OUR CHEF"}
-        </motion.div>
-}
+        {isDesktop && (
+          <motion.div
+            className="bg-orange w-10 h-10 fixed rounded-full left-0 top-0 -z-10"
+            variants={cursorVariants}
+            // animate="default"
+            animate={currentVaraint}
+          />
+        )}
+        {isDesktop && (
+          <motion.div
+            className={`w-1/3 absolute h-screen right-10 break-words justify-items-center ${
+              hasClicked ? "text-[87px]" : "text-9xl"
+            } font-bold text-black`}
+            onMouseEnter={() => {
+              setCurrentVariant("notDefault");
+            }}
+            onMouseLeave={() => {
+              setCurrentVariant("default");
+            }}
+          >
+            {hasClicked
+              ? "LOOK HOW THEY BUTCHERED MY BOY"
+              : "DO NOT DARE DRAG OUR CHEF"}
+          </motion.div>
+        )}
       </div>
     </>
   );
