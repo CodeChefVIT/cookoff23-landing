@@ -9,14 +9,14 @@ const FixedNav = () => {
   return (
     <div className="fixed h-screen w-screen text-orange ">
 
-      <div className="flex justify-between p-12 md:p-0">
-        <div className="h-16 w-auto cursor-pointer logo Z-40">
+      <div className="flex justify-between p-12 md:p-6">
+        <div className="h-16 w-auto cursor-pointer logo z-40">
 
-          <Image className="h-16 w-auto" src={cclogo} alt="CC Logo" />
+          <Image className="h-16 w-auto sm:h-12" src={cclogo} alt="CC Logo" />
         </div>
         <Options />
       </div>
-      <div className="absolute left-[3.7rem] bottom-40">
+      <div className="absolute left-[3.7rem] bottom-40 sm:hidden">
         <SocialHandles />
       </div>
     </div>

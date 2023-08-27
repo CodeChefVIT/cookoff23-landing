@@ -28,6 +28,7 @@ import OtherEventsMask from "@/components/OtherEventsMask";
 import FaqsMask from "@/components/FaqsMask";
 import SocialsMask from "@/components/SocialsMask";
 import FillerMask from "@/components/FillerMask";
+import FixedNavMask from "@/components/FixedNavMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -74,8 +75,9 @@ export default function Home() {
           WebkitMaskSize: `${size}px`,
         }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
-        className="one mask-content -z-30"
+        className="one mask-content -z-30 sm:hidden"
       >
+        <FixedNavMask />
         <WelcomeMask />
         <AboutMask />
         <FillerMask height={360}/>
