@@ -11,9 +11,11 @@ const Prizes = () => {
   return (
     <div
       id="proxima"
-      className="h-[100vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16"
+      className="min-h-[100vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16"
     >
-      <p className="text-lg font-normal tracking-[7px] px-36 md:px-0">PRIZES</p>
+      <p className=" tracking-[7px] md:text-[10px] mx-[13%] md:mx-[10%] mt-10 mb-10">
+        PRIZES
+      </p>
       <div>
         <Awards
           title="FIRST"

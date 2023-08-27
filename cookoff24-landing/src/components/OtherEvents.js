@@ -15,8 +15,8 @@ const OtherEvents = () => {
     setIsHovered2(!isHovered2);
   };
   return (
-    <div className="h-[60vh] w-[100vw] relative">
-      <div className="uppercase text-[16px] text-[#B7AB98] mx-[200px] mt-20 mb-10 tracking-[7px]">
+    <div className="h-[50vh] w-[100vw] relative">
+      <div className="uppercase text-[16px] md:text-[10px] text-[#B7AB98] mx-[13%] md:mx-[10%] mt-20 mb-10 tracking-[7px]">
         other events
       </div>
       <div className="flex w-full h-full justify-evenly items-center">
@@ -25,7 +25,7 @@ const OtherEvents = () => {
           onMouseLeave={handleHover1}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1 }}
-          className={`rounded-full w-[300px] h-[300px] lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] flex justify-center items-center ${
+          className={`rounded-full w-[280px] h-[280px] lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] flex justify-center items-center ${
             isHovered1 ? "bg-[#eb5939]" : "bg-[#222222]"
           }`}
         >
@@ -79,7 +79,7 @@ const OtherEvents = () => {
           onMouseLeave={handleHover2}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1 }}
-          className={`rounded-full w-[300px] h-[300px] lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] flex justify-center items-center ${
+          className={`rounded-full w-[280px] h-[280px] lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] flex justify-center items-center ${
             isHovered2 ? "bg-[#eb5939]" : "bg-[#222222]"
           }`}
         >
