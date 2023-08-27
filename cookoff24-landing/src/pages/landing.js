@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AboutMask from "@/components/AboutMask";
 import WelcomeMask from "@/components/WelcomeMask";
+import TimelineMask from "@/components/TimelineMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,6 +72,7 @@ export default function Home() {
       >
         <WelcomeMask />
         <AboutMask />
+        <TimelineMask/>
       </motion.div>
     </main>
   );
