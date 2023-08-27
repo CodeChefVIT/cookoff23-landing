@@ -20,6 +20,13 @@ import { useState, useEffect } from "react";
 import AboutMask from "@/components/AboutMask";
 import WelcomeMask from "@/components/WelcomeMask";
 import CountdownMask from "@/components/CountdownMask";
+import BannerMask from "@/components/BannerMask";
+import RegisterNowMask from "@/components/RegisterNowMask";
+import PrizesMask from "@/components/PrizesMask";
+import TimelineMask from "@/components/TimelineMask";
+import OtherEventsMask from "@/components/OtherEventsMask";
+import FaqsMask from "@/components/FaqsMask";
+import SocialsMask from "@/components/SocialsMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -74,11 +81,14 @@ export default function Home() {
       >
         <WelcomeMask />
         <AboutMask />
-        {/* <TimelineMask/>
+        <TimelineMask/>
         <BannerMask/>
         <RegisterNowMask/>
-        <PrizesMask/> */}
+        <PrizesMask/>
         <CountdownMask/>
+        <OtherEventsMask />
+        <FaqsMask />
+        <SocialsMask/>
       </motion.div>
     </main>
   );
