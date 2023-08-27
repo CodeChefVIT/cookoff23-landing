@@ -26,7 +26,8 @@ const Countdown = () => {
     const interval = setInterval(calculateCountdown, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  });
+  
   return (
     <div className="h-[100vh] w-[100vw] text-grey text-9xl font-bold  mx-32 flex flex-col gap-64 pt-10">
       <div className="text-lg font-normal tracking-[7px]">COUNTDOWN</div>

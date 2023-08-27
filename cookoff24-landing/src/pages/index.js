@@ -10,7 +10,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 const inter = Inter({ subsets: ["latin"] });
 import Link from "next/link";
 
-const index = () => {
+const Index = () => {
   const isDesktop = useMediaQuery("(min-width: 965px)");
   /* Cursor following div states*/
 
@@ -166,4 +166,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

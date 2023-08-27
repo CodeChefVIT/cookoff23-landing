@@ -48,10 +48,10 @@ export default function Home() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
   useEffect(() => {
     setInnerHeight(window.innerHeight);
-  }, []);
+  });
   const { x, y } = useMousePosition();
 
   return (

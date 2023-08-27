@@ -46,7 +46,7 @@ const FixedNav = () => {
           <Link href="/landing" className="text-3xl font-black">Home</Link>
           <Link href="/landing" className="text-3xl font-black">About</Link>
           <Link href="/landing" className="text-3xl font-black">Timeline</Link>
-          <Link href="/landing" className="text-3xl font-black">FAQ's</Link>
+          <Link href="/landing" className="text-3xl font-black">FAQ&apos;s</Link>
           <Link href="/landing" className="text-3xl font-black">Socials</Link>
         </div>
       ) : (
