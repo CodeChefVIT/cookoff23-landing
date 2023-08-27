@@ -26,7 +26,7 @@ const AboutMask = () => {
           setIsHovered(false);
         }}
         id="proxima"
-        className="text-justify text-4xl tracking-wide font-bold leading-relaxed sm:tracking-wide sm:font-semibold"
+        className="text-justify text-4xl tracking-wide font-bold leading-relaxed lg:text-2xl lg:tracking-wide lg:font-semibold sm:text-2xl sm:tracking-wide sm:font-semibold"
       >
         Cook off is <span className="text-black">CodeChef VIT</span>&apos;s
         flagship competitive coding event that tests the coding skills of tech
