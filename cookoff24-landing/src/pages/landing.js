@@ -82,15 +82,8 @@ export default function Home() {
       >
         <WelcomeMask />
         <AboutMask />
-        <FillerMask/>
-        {/* <TimelineMask/>
-        <BannerMask/>
-        <RegisterNowMask/>
-        <PrizesMask/>
+        <FillerMask height={360}/>
         <CountdownMask/>
-        <OtherEventsMask />
-        <FaqsMask />
-        <SocialsMask/> */}
       </motion.div>
     </main>
   );
