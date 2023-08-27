@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AboutMask from "@/components/AboutMask";
 import WelcomeMask from "@/components/WelcomeMask";
+import TimelineMask from "@/components/TimelineMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,7 +43,7 @@ export default function Home() {
   const { x, y } = useMousePosition();
 
   return (
-    <main className="h-[850vh] w-[100vw] relative cursor-default">
+    <main className="h-[850vh] w-[100vw] relative cursor-default overflow-x-hidden">
       <div className="absolute">
         <FixedNav />
         <Welcome />
@@ -67,6 +68,7 @@ export default function Home() {
       >
         <WelcomeMask />
         <AboutMask />
+        <TimelineMask/>
       </motion.div>
     </main>
   );
