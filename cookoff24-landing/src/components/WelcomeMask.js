@@ -14,6 +14,7 @@ const WelcomeMask = () => {
         onMouseLeave={() => {
           setIsHoveredOnSmall(false);
         }}
+        className="relative -bottom-32"
       >
         *CRITICS* SAY, "THE BEST THING TO HAPPEN TO HUMANKIND"
       </p>

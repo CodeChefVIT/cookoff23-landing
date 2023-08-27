@@ -3,6 +3,7 @@ import { animate, motion } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import TitleSVG from "./TitleSVG";
 import TitleSVGMobile from "./TitleSVGMobile";
+import Link from "next/link";
 
 const Welcome = () => {
   const isMid = useMediaQuery("(max-width:1012px)");
@@ -10,12 +11,19 @@ const Welcome = () => {
 
   return (
     <div className="h-[100vh] w-[100vw] cursor-default flex flex-col justify-center">
-     
-     {/* {isMid? (<TitleSVGMobile/>):(<TitleSVG/>)} */}
      {isMid && <TitleSVGMobile/>}
      {!isMid && <TitleSVG/>}
-     {/* <TitleSVG/>
-     <TitleSVGMobile/> */}
+     <div className="flex justify-center z-10">
+            <Link href={"/landing"}>
+              <motion.button
+                className={`text-grey text-xl rounded-full border-2 border-grey w-56 py-3 hover:bg-orange hover:border-4 hover:border-dark-grey hover:text-black hover:font-bold`}
+                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.2 }}
+              >
+                REGISTER
+              </motion.button>
+            </Link>
+          </div>
     </div>
     // <div className="h-[100vh] w-[100vw] cursor-default flex flex-col justify-center">
     //   <motion.div
