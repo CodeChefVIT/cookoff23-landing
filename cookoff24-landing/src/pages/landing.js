@@ -23,13 +23,9 @@ import TimelineMask from "@/components/TimelineMask";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const {
-    setInnerHeight,
-    scrollPosition,
-    setScrollPosition,
-    size
-  } = useAppContext();
-  console.log(size)
+  const { setInnerHeight, scrollPosition, setScrollPosition, size } =
+    useAppContext();
+  console.log(size);
 
   useEffect(() => {
     const handleScroll = () => {

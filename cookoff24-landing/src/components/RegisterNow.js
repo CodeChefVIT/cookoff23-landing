@@ -18,7 +18,7 @@ const RegisterNow = () => {
   };
 
   return (
-    <div className="h-[60vh] w-[100vw] text-grey relative">
+    <div className="h-[100vh] w-[100vw] text-grey relative bg-[#060606]">
       <div className="h-full w-full flex justify-center items-center">
         <motion.div
           onMouseEnter={handleHover}
