@@ -85,6 +85,7 @@ const OtherEvents = () => {
         >
           <Image
             className="lg:w-[90px] md:w-[70px]"
+            alt=""
             src={event2}
             quality={100}
           />
