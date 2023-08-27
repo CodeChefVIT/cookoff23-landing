@@ -29,13 +29,15 @@ import FaqsMask from "@/components/FaqsMask";
 import SocialsMask from "@/components/SocialsMask";
 import FillerMask from "@/components/FillerMask";
 import FillerMask2 from "@/components/FillerMask2";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { setInnerHeight, scrollPosition, setScrollPosition, size } =
     useAppContext();
-  console.log(size);
+
+  const isNotMobile = !useMediaQuery("(max-width:632px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +56,7 @@ export default function Home() {
 
   return (
     <main className="h-[960vh] w-[100vw] relative cursor-default overflow-x-hidden">
-      <div className="absolute">
+      <div className="absolute w-[100vw]">
         <FixedNav />
         <Welcome />
         <About />
@@ -62,30 +64,31 @@ export default function Home() {
         <Banner />
         <RegisterNow />
         <Prizes />
-        <Countdown/>
+        <Countdown />
         <OtherEvents />
         <Faqs />
         <Socials />
       </div>
-      <motion.div
-        animate={{
-          WebkitMaskPosition: `${x - size / 2}px ${
-            y - size / 2 + scrollPosition
-          }px`,
-          WebkitMaskSize: `${size}px`,
-        }}
-        transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
-        className="one mask-content -z-30"
-      >
-        <WelcomeMask />
-        <AboutMask />
-        <FillerMask/>
-        <FillerMask2/>
-        <CountdownMask/>
-        <FillerMask2/>
-        <FillerMask2/>
-
-      </motion.div>
+      {isNotMobile && (
+        <motion.div
+          animate={{
+            WebkitMaskPosition: `${x - size / 2}px ${
+              y - size / 2 + scrollPosition
+            }px`,
+            WebkitMaskSize: `${size}px`,
+          }}
+          transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
+          className="one mask-content -z-30"
+        >
+          <WelcomeMask />
+          <AboutMask />
+          <FillerMask />
+          <FillerMask2 />
+          <CountdownMask />
+          <FillerMask2 />
+          <FillerMask2 />
+        </motion.div>
+      )}
     </main>
   );
 }
