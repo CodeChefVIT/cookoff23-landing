@@ -23,7 +23,7 @@ const RegisterNow = () => {
         <motion.div
           onMouseEnter={handleHover}
           onMouseLeave={handleHover}
-          className="flex flex-col justify-center items-center w-full h-[400px]"
+          className="flex flex-col justify-center items-center w-full h-[400px] z-10"
         >
           <Image src={cclogo} quality={100} width={100} alt="CCLogo" />
           <motion.button

@@ -28,7 +28,6 @@ import OtherEventsMask from "@/components/OtherEventsMask";
 import FaqsMask from "@/components/FaqsMask";
 import SocialsMask from "@/components/SocialsMask";
 import FillerMask from "@/components/FillerMask";
-import FixedNavMask from "@/components/FixedNavMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,7 +52,7 @@ export default function Home() {
   const { x, y } = useMousePosition();
 
   return (
-    <main className="w-[100vw] relative cursor-default overflow-x-hidden">
+    <main className="h-[950vh] w-[100vw] relative cursor-default overflow-x-hidden">
       <div className="absolute">
         <FixedNav />
         <Welcome />
@@ -75,9 +74,8 @@ export default function Home() {
           WebkitMaskSize: `${size}px`,
         }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
-        className="one mask-content -z-30 sm:hidden"
+        className="one mask-content -z-30"
       >
-        <FixedNavMask />
         <WelcomeMask />
         <AboutMask />
         <FillerMask height={360}/>
