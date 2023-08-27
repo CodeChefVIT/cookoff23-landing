@@ -13,7 +13,7 @@ const Prizes = () => {
       id="proxima"
       className="h-[100vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16"
     >
-      <p className="text-lg font-normal tracking-[7px] px-36 md:px-0">PRIZES</p>
+      <p className="md:self-center text-lg font-normal tracking-[7px] px-36 md:px-0">PRIZES</p>
       <div>
         <Awards
           title="FIRST"
@@ -37,7 +37,7 @@ const Prizes = () => {
         />
         <div className="parent container relative">
         <div className="text border border-x-0 border-grey w-[100vw] flex justify-between items-center">
-          <p className="px-36 text-8xl font-bold tracking-wide cursor-pointer md:text-sm  md:pl-10">
+          <p className="px-36 text-8xl font-bold tracking-wide cursor-pointer md:text-xl text-center md:pl-10 justify-self-start">
             WOMEN
           </p>
           <p className="px-36 h-20 w-[45vw] text-lg tracking-wide text-black md:text-xs xl:text-sm md:px-0 md:tracking-tight ">
@@ -46,7 +46,7 @@ const Prizes = () => {
           </p>
         </div>
         <div className=" overlay transition-all absolute top-0 bg-orange w-[100vw] flex justify-between items-center">
-          <p className="px-36 text-8xl font-bold tracking-wide cursor-pointer text-orange md:pl-10 md:text-sm ">
+          <p className="px-36 text-8xl font-bold tracking-wide cursor-pointer md:text-xl text-center   md:pl-10 justify-self-start text-orange">
            WOMEN
           </p>
           <p className="px-36 h-20 w-[45vw] text-lg tracking-wide text-orange  md:text-xs md:px-0 xl:text-sm md:tracking-tight">

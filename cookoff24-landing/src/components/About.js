@@ -45,7 +45,7 @@ const About = () => {
   return (
     <div className="h-[100vh] w-[100vw] relative  cursor-default ">
       <div className="body px-[13%] md:px-[10%] flex flex-col justify-center items-stretch gap-[8rem] py-16 h-[100vh] text-grey">
-      <p className="text-lg font-normal tracking-[7px]">ABOUT EVENT</p>
+      <p className="text-lg font-normal tracking-[7px] md:self-center">ABOUT EVENT</p>
         <p
           id="proxima"
           className="text-justify text-4xl tracking-wide font-bold leading-relaxed lg:text-2xl lg:tracking-wide lg:font-semibold sm:text-2xl sm:tracking-wide sm:font-semibold"
