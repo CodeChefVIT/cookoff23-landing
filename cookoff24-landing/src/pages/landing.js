@@ -52,7 +52,7 @@ export default function Home() {
   const { x, y } = useMousePosition();
 
   return (
-    <main className="h-[1000vh] w-[100vw] relative cursor-default overflow-x-hidden">
+    <main className="w-[100vw] relative cursor-default overflow-x-hidden">
       <div className="absolute">
         <FixedNav />
         <Welcome />
