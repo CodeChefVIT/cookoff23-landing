@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import FixedNav from "@/components/FixedNav";
 import About from "@/components/About";
-import Timeline from "@/components/Timeline";
+import Countdown from "@/components/Countdown";
 import Banner from "@/components/Banner";
 import Prizes from "@/components/Prizes";
 import Faqs from "@/components/Faqs";
@@ -18,7 +18,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AboutMask from "@/components/AboutMask";
 import WelcomeMask from "@/components/WelcomeMask";
-import TimelineMask from "@/components/TimelineMask";
+import CountdownMask from "@/components/CountdownMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,6 +56,7 @@ export default function Home() {
         <Banner />
         <RegisterNow />
         <Prizes />
+        <Countdown/>
         <OtherEvents />
         <Faqs />
         <Socials />
