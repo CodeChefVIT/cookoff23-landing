@@ -27,6 +27,7 @@ import TimelineMask from "@/components/TimelineMask";
 import OtherEventsMask from "@/components/OtherEventsMask";
 import FaqsMask from "@/components/FaqsMask";
 import SocialsMask from "@/components/SocialsMask";
+import FillerMask from "@/components/FillerMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,7 +56,7 @@ export default function Home() {
   const { x, y } = useMousePosition();
 
   return (
-    <main className="h-[850vh] w-[100vw] relative cursor-default overflow-x-hidden">
+    <main className="h-[950vh] w-[100vw] relative cursor-default overflow-x-hidden">
       <div className="absolute">
         <FixedNav />
         <Welcome />
@@ -81,14 +82,15 @@ export default function Home() {
       >
         <WelcomeMask />
         <AboutMask />
-        <TimelineMask/>
+        <FillerMask/>
+        {/* <TimelineMask/>
         <BannerMask/>
         <RegisterNowMask/>
         <PrizesMask/>
         <CountdownMask/>
         <OtherEventsMask />
         <FaqsMask />
-        <SocialsMask/>
+        <SocialsMask/> */}
       </motion.div>
     </main>
   );

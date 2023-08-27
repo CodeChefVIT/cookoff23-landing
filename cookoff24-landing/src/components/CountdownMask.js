@@ -3,7 +3,7 @@ import { useAppContext } from "@/context/appContext";
 const CountdownMask = () => {
     const {setIsHoveredOnSmall} = useAppContext();
   return (
-    <div className="border-2 border-grey relative h-[100vh] bg-orange pl-36">
+    <div className="relative h-[100vh] bg-orange pl-36">
         <div className="h-[60vh]"></div>
       <p
         onMouseEnter={() => {
