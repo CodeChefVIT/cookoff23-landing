@@ -1,60 +1,45 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import {color, easeIn, motion} from "framer-motion"
 
 const Timeline = () => {
-  const timeOfEvent = new Date(2023, 8, 24, 7, 0);
-  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0 });
-
-  useEffect(() => {
-    const calculateCountdown = () => {
-      const currentTime = new Date();
-      const timeDifference = timeOfEvent - currentTime;
-
-      if (timeDifference > 0) {
-        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-        );
-
-        setCountdown({ days, hours, minutes });
-      }
-    };
-
-    const interval = setInterval(calculateCountdown, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const events = [
+    { time: "09:00 AM", event: "Event Starts" },
+    { time: "10:00 AM", event: "Placeholder" },
+    { time: "11:00 AM", event: "Placeholder" },
+    { time: "12:00 PM", event: "Placeholder" },
+    { time: "02:00 PM", event: "Event Commences" },
+  ];
+  console.log(100/events.length);
   return (
-    <div className="h-[100vh] w-[100vw] text-grey text-9xl font-bold  mx-32 flex flex-col gap-64 pt-10">
-      <div className="text-lg font-normal tracking-[7px]">TIMELINE</div>
-      <div className="flex gap-96 ml-16 sm:flex-col md:gap-16 justify-items-center">
-        <div className="flex flex-col justify-center">
-          <div className="flex flex-col justify-center text-center">
-            {countdown.days}
-          </div>
-          <div className="text-orange text-4xl font-semibold text-center -mt-10">
-            D A Y S
-          </div>
-        </div>
-        <div className="flex flex-col justify-center">
-          <div className="flex flex-col justify-center text-center">
-            {countdown.hours}
-          </div>
-          <div className="text-orange text-4xl font-semibold text-center -mt-10">
-            H O U R S
-          </div>
-        </div>
-        <div className="flex flex-col justify-center">
-          <div className="flex flex-col justify-center text-center">
-            {countdown.days}
-          </div>
-          <div className="text-orange text-4xl font-semibold text-center -mt-10">
-            M I N S
-          </div>
-        </div>
+    <div className="h-[100vh] relative">
+      <div className="text-lg font-normal tracking-[7px] ml-40 text-grey ">TIMELINE</div>
+      <div className="flex flex-col h-[85%] mt-10">
+        {events.map((e) => {
+          return (<motion.div 
+            // className={`flex ml-40 h-[20%]`}
+            className={`flex ml-40 h-[${100/events.length}%] border-b-2 border-grey gap-44 text-grey text-3xl font-semibold z-20 px-10`}
+            whileHover={{
+                backgroundColor:"#EB5939",
+                color:"rgb(13,13,13)",
+            }}
+            transition={{duration:0.2,ease: "circInOut"}}
+>
+            <div className=" flex flex-col justify-center">{e.time}</div>
+            <div className="flex flex-col justify-center">{e.event}</div>
+          </motion.div>);
+        })}
+        {/* <motion.div 
+            // className={`flex ml-40 h-[20%]`}
+            className={`flex ml-40 h-[${100/events.length}%] border-b-2 border-grey gap-44 text-grey text-3xl font-semibold z-20 px-10`}
+            whileHover={{
+                backgroundColor:"#EB5939",
+                color:"rgb(13,13,13)",
+            }}
+            transition={{duration:0.2,ease: "circInOut"}}
+>
+            <div className=" flex flex-col justify-center">hh:mm AM</div>
+            <div className="flex flex-col justify-center">Place</div>
+          </motion.div>         */}
+
       </div>
     </div>
   );

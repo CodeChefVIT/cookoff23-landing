@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import FixedNav from "@/components/FixedNav";
 import About from "@/components/About";
 import Timeline from "@/components/Timeline";
+import Countdown from "@/components/Countdown";
 import Banner from "@/components/Banner";
 import Prizes from "@/components/Prizes";
 import Faqs from "@/components/Faqs";
@@ -18,7 +19,15 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import AboutMask from "@/components/AboutMask";
 import WelcomeMask from "@/components/WelcomeMask";
+import CountdownMask from "@/components/CountdownMask";
+import BannerMask from "@/components/BannerMask";
+import RegisterNowMask from "@/components/RegisterNowMask";
+import PrizesMask from "@/components/PrizesMask";
 import TimelineMask from "@/components/TimelineMask";
+import OtherEventsMask from "@/components/OtherEventsMask";
+import FaqsMask from "@/components/FaqsMask";
+import SocialsMask from "@/components/SocialsMask";
+import FillerMask from "@/components/FillerMask";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,7 +52,7 @@ export default function Home() {
   const { x, y } = useMousePosition();
 
   return (
-    <main className="h-[850vh] w-[100vw] relative cursor-default overflow-x-hidden">
+    <main className="h-[1000vh] w-[100vw] relative cursor-default overflow-x-hidden">
       <div className="absolute">
         <FixedNav />
         <Welcome />
@@ -52,6 +61,7 @@ export default function Home() {
         <Banner />
         <RegisterNow />
         <Prizes />
+        <Countdown/>
         <OtherEvents />
         <Faqs />
         <Socials />
@@ -68,7 +78,12 @@ export default function Home() {
       >
         <WelcomeMask />
         <AboutMask />
-        <TimelineMask/>
+        <FillerMask height={360}/>
+        <CountdownMask/>
+        {/* <FillerMask height={360}/> */}
+        <FillerMask height={100}/>
+        <FillerMask height={100}/>
+        <FillerMask height={100}/>
       </motion.div>
     </main>
   );
