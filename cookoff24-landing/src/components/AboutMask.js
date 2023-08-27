@@ -14,7 +14,7 @@ const AboutMask = () => {
         onMouseLeave={() => {
           setIsHoveredOnSmall(false);
         }}
-        className="uppercase text-[16px] md:text-[10px] mx-[13%] md:mx-[10%] text-[#B7AB98] mb-10 tracking-[7px] text-black"
+        className="uppercase text-[16px] md:text-[10px] mx-[13%] md:mx-[10%] mb-10 tracking-[7px] text-black"
       >
         ABOUT EVENT
       </div>
