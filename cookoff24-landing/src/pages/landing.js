@@ -79,9 +79,9 @@ export default function Home() {
         <WelcomeMask />
         <AboutMask />
         <FillerMask height={360}/>
+        <FillerMask height={100}/>
         <CountdownMask/>
         {/* <FillerMask height={360}/> */}
-        <FillerMask height={100}/>
         <FillerMask height={100}/>
         <FillerMask height={100}/>
       </motion.div>
