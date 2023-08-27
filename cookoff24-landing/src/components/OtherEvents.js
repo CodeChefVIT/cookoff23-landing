@@ -15,7 +15,7 @@ const OtherEvents = () => {
     setIsHovered2(!isHovered2);
   };
   return (
-    <div className="h-[70vh] w-[100vw] relative pt-20 pb-10 ">
+    <div className="h-[70vh] w-[100vw] relative pt-20 pb-10 z-10">
       <div className="uppercase text-[16px] text-[#B7AB98] mx-[200px] tracking-[7px]">
         other events
       </div>

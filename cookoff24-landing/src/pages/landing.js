@@ -56,7 +56,7 @@ export default function Home() {
   const { x, y } = useMousePosition();
 
   return (
-    <main className="h-[950vh] w-[100vw] relative cursor-default overflow-x-hidden">
+    <main className="h-[1000vh] w-[100vw] relative cursor-default overflow-x-hidden">
       <div className="absolute">
         <FixedNav />
         <Welcome />
@@ -84,6 +84,10 @@ export default function Home() {
         <AboutMask />
         <FillerMask height={360}/>
         <CountdownMask/>
+        {/* <FillerMask height={360}/> */}
+        <FillerMask height={100}/>
+        <FillerMask height={100}/>
+        <FillerMask height={100}/>
       </motion.div>
     </main>
   );
