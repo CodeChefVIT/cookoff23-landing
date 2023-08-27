@@ -5,47 +5,12 @@ import { motion } from "framer-motion";
 import useMousePosition from "@/utils/useMousePosition";
 
 const About = () => {
-  /*these states help manage the size of cursor*/
-  // const [isHovered, setIsHovered] = useState(false);
-  // const [isHoveredOnSmall, setIsHoveredOnSmall] = useState(false);
-
-  // const [innerHeight, setInnerHeight] = useState(0);
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const size = isHovered ? 400 : isHoveredOnSmall ? 100 : 40;
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollPosition(window.scrollY || window.pageYOffset);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   setInnerHeight(window.innerHeight);
-  // }
-  // , []);
-  const { x, y } = useMousePosition();
-  const {
-    isHovered,
-    setIsHovered,
-    isHoveredOnSmall,
-    setIsHoveredOnSmall,
-    innerHeight,
-    setInnerHeight,
-    scrollPosition,
-    setScrollPosition,
-    size,
-  } = useAppContext();
-
-  //basically for cursor we need to keep track of it's size, it's mouse position and the scroll position
   return (
     <div className="h-[100vh] w-[100vw] relative  cursor-default ">
-      <div className="body px-[13%] md:px-[10%] flex flex-col justify-center items-stretch gap-[8rem] py-16 h-[100vh] text-grey">
-      <p className="text-lg font-normal tracking-[7px] md:self-center">ABOUT EVENT</p>
+      <div className="uppercase text-[16px] md:text-[10px] mx-[13%] md:mx-[10%] text-[#B7AB98] mt-32 mb-10 tracking-[7px]">
+        About Me
+      </div>
+      <div className="body mx-[13%] md:mx-[10%] flex flex-col justify-center items-stretch gap-[8rem] py-16 h-[100vh] text-grey">
         <p
           id="proxima"
           className="text-justify text-4xl tracking-wide font-bold leading-relaxed lg:text-2xl lg:tracking-wide lg:font-semibold sm:text-2xl sm:tracking-wide sm:font-semibold"

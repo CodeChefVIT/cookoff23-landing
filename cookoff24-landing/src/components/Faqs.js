@@ -4,8 +4,8 @@ import FaqItem from "./faqItem"; // Adjust the path to match your folder structu
 
 const Faqs = () => {
   return (
-    <div className="min-h-[100vh] w-[100vw] relative">
-      <div className="uppercase text-[16px] text-[#B7AB98] mx-[200px] mt-32 mb-10 tracking-[7px]">
+    <div className="min-h-[100vh] w-[100vw] relative z-10">
+      <div className="uppercase text-[16px] md:text-[10px] mx-[13%] md:mx-[10%] text-[#B7AB98] mt-32 mb-10 tracking-[7px]">
         FAQs
       </div>
       <FaqItem question="What is Cook-Off?" answer="A Competative Exam." />
