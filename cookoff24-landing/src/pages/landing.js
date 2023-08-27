@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import FixedNav from "@/components/FixedNav";
 import About from "@/components/About";
+import Timeline from "@/components/Timeline";
 import Countdown from "@/components/Countdown";
 import Banner from "@/components/Banner";
 import Prizes from "@/components/Prizes";
@@ -73,7 +74,11 @@ export default function Home() {
       >
         <WelcomeMask />
         <AboutMask />
-        <TimelineMask/>
+        {/* <TimelineMask/>
+        <BannerMask/>
+        <RegisterNowMask/>
+        <PrizesMask/> */}
+        <CountdownMask/>
       </motion.div>
     </main>
   );
