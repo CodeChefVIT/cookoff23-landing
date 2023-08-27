@@ -23,13 +23,9 @@ import TimelineMask from "@/components/TimelineMask";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const {
-    setInnerHeight,
-    scrollPosition,
-    setScrollPosition,
-    size
-  } = useAppContext();
-  console.log(size)
+  const { setInnerHeight, scrollPosition, setScrollPosition, size } =
+    useAppContext();
+  console.log(size);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,11 +64,11 @@ export default function Home() {
           WebkitMaskSize: `${size}px`,
         }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
-        className="one mask-content -z-30"
+        className="one mask-content -z-30 sm:hidden"
       >
         <WelcomeMask />
         <AboutMask />
-        <TimelineMask/>
+        <TimelineMask />
       </motion.div>
     </main>
   );
