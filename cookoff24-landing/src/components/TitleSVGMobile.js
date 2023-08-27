@@ -8,7 +8,7 @@ const TitleSVGMobile = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     //   className="absolute w-[75vw] min-w-[700px] top-48 -right-36 z-20 opacity-100 sm:opacity-100"
-      className="w-[75vw] min-w-[450px] mx-auto" 
+      className="w-[75vw] min-w-[300px] max-w-[450px] mx-auto" 
       whileHover={{ scale: 1.2 }}
     >
       <path

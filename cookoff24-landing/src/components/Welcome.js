@@ -16,7 +16,7 @@ const Welcome = () => {
      <div className="flex justify-center z-10">
             <Link href={"/landing"}>
               <motion.button
-                className={`text-grey text-xl rounded-full border-2 border-grey w-56 py-3 hover:bg-orange hover:border-4 hover:border-dark-grey hover:text-black hover:font-bold`}
+                className={`text-grey text-xl rounded-full border-2 border-grey w-56 py-3 hover:bg-orange hover:border-4 hover:border-dark-grey hover:text-black hover:font-bold sm:bg-orange sm:text-black sm:font-semibold sm:border-dark-grey`}
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale: 1.2 }}
               >
