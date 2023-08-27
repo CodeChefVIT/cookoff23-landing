@@ -28,6 +28,7 @@ import OtherEventsMask from "@/components/OtherEventsMask";
 import FaqsMask from "@/components/FaqsMask";
 import SocialsMask from "@/components/SocialsMask";
 import FillerMask from "@/components/FillerMask";
+import FillerMask2 from "@/components/FillerMask2";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -78,11 +79,11 @@ export default function Home() {
       >
         <WelcomeMask />
         <AboutMask />
-        <FillerMask height={"360"}/>
-        <FillerMask height={"100"}/>
+        <FillerMask/>
+        <FillerMask2/>
         <CountdownMask/>
-        <FillerMask height={"100"}/>
-        <FillerMask height={"100"}/>
+        <FillerMask2/>
+        <FillerMask2/>
 
       </motion.div>
     </main>
