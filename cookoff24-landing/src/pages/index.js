@@ -125,9 +125,9 @@ const Index = () => {
           <div className="flex justify-center ">
             <Link href={"/landing"}>
               <motion.button
-                className={`text-grey text-xl rounded-full border-2 border-grey w-56 py-3 ${inter.className}  hover:bg-orange hover:border-4 hover:border-dark-grey hover:text-black hover:font-bold`}
+                className={`text-grey text-xl rounded-full border-2 border-grey w-56 py-3 ${inter.className}  hover:bg-[#de4c2c] hover:border-4 hover:text-black hover:font-bold bg-[#0d0d0d] hover:border-[#de4c2c]`}
                 whileTap={{ scale: 0.9 }}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.1 }}
               >
                 START
               </motion.button>
