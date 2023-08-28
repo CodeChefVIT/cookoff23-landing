@@ -7,23 +7,23 @@ import Link from "next/link";
 
 const Welcome = () => {
   const isMid = useMediaQuery("(max-width:1012px)");
-  console.log("isMid"+isMid)
+  console.log("isMid" + isMid);
 
   return (
     <div className="h-[100vh] w-[100vw] cursor-default flex flex-col justify-center">
-     {isMid && <TitleSVGMobile/>}
-     {!isMid && <TitleSVG/>}
-     <div className="flex justify-center z-10">
-            <Link href={"/landing"}>
-              <motion.button
-                className={`text-grey text-xl rounded-full border-2 border-grey w-56 py-3 hover:bg-orange hover:border-4 hover:border-dark-grey hover:text-black hover:font-bold sm:bg-orange sm:text-black sm:font-semibold sm:border-dark-grey`}
-                whileTap={{ scale: 0.9 }}
-                whileHover={{ scale: 1.2 }}
-              >
-                REGISTER
-              </motion.button>
-            </Link>
-          </div>
+      {isMid && <TitleSVGMobile />}
+      {!isMid && <TitleSVG />}
+      <div className="flex justify-center z-10">
+        <Link href={"/landing"}>
+          <motion.button
+            className="rounded-[4px] w-[200px] py-2 px-12 bg-orange sm:bg-orange text-black sm:font-semibold font-bold sm:border-dark-grey hover:text-[#fff] text-[18px] md:text-[13px] hover:font-semibold"
+            whileTap={{ scale: 1 }}
+            whileHover={{ scale: 1.2 }}
+          >
+            Register
+          </motion.button>
+        </Link>
+      </div>
     </div>
     // <div className="h-[100vh] w-[100vw] cursor-default flex flex-col justify-center">
     //   <motion.div
@@ -38,7 +38,6 @@ const Welcome = () => {
     //     </span>
     //   </motion.div>
     // </div>
-
   );
 };
 
