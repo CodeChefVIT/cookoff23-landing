@@ -14,15 +14,15 @@ const Faqs = ({ question, answer }) => {
         onMouseLeave={handleHover}
         className={`${
           isHovered
-            ? `bg-[#eb5939] duration-300 pb-24`
+            ? `bg-[#eb5939] duration-300 pb-24 sm:pb-10`
             : `bg-transparent duration-300`
         }`}
       >
         <div className="mx-[13%] md:mx-[10%]">
-          <div className="flex justify-between items-center pt-7 ">
-            <div className="flex items-end">
+          <div className="flex justify-between items-center pt-7 sm:pt-1 ">
+            <div className="flex items-end sm:items-center  ">
               <motion.svg
-                className="w-24 lg:w-20 md:w-12"
+                className="w-[10vw] md:w-[60px] sm:w-[55px]"
                 animate={{
                   fill: isHovered ? "#000000" : "#B5A693",
                 }}
@@ -37,7 +37,7 @@ const Faqs = ({ question, answer }) => {
               </motion.svg>
 
               <div
-                className={`text-[32px] lg:text-[28px] md:text-[22px] font-bold mx-10 ${
+                className={`w-[540px] lg:w-[480px] md:w-[380px] sm:w-full text-[32px] lg:text-[28px] md:text-[24px] sm:text-[16px] font-bold mx-5 sm:mx-3 sm:pt-5 ${
                   isHovered
                     ? `text-black duration-300`
                     : `text-[#B7AB98] duration-300`
@@ -46,25 +46,26 @@ const Faqs = ({ question, answer }) => {
                 {question}
               </div>
             </div>
-
-            <motion.svg
-              className="w-20 lg:w-16 md:w-10"
-              initial={{ rotate: 0 }}
-              animate={{
-                rotate: isHovered ? -135 : 0,
-                fill: isHovered ? "#000000" : "#B5A693",
-              }}
-              transition={{ ease: easeInOut, duration: 0.3 }}
-              width="53"
-              height="53"
-              viewBox="0 0 73 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M27.6614 72.3414V0.15553H45.9118V72.3414H27.6614ZM0.693695 45.3736V27.1233H72.8795V45.3736H0.693695Z" />
-            </motion.svg>
+            <div className="sm:w-[30px]">
+              <motion.svg
+                className="w-[10vw] md:w-[60px] sm:w-[30px]"
+                initial={{ rotate: 0 }}
+                animate={{
+                  rotate: isHovered ? -135 : 0,
+                  fill: isHovered ? "#000000" : "#B5A693",
+                }}
+                transition={{ ease: easeInOut, duration: 0.3 }}
+                width="53"
+                height="53"
+                viewBox="0 0 73 73"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M27.6614 72.3414V0.15553H45.9118V72.3414H27.6614ZM0.693695 45.3736V27.1233H72.8795V45.3736H0.693695Z" />
+              </motion.svg>
+            </div>
           </div>
-          <motion.div className="text-[18px] text-[#0d0d0d] font-semibold mt-3 ml-[138px] md:ml-[80px]">
+          <motion.div className="text-[18px] md:text-[14px] sm:text-[12px] text-[#0d0d0d] font-semibold mt-3 sm:mt-0 ml-[175px] md:ml-[60px]">
             {answer}
           </motion.div>
         </div>

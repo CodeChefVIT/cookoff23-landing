@@ -60,7 +60,7 @@ const Socials = () => {
         </div>
         <div className="flex pt-5 items-center gap-5 z-10">
           <TraingleSVG/>
-          <Link href={"/landing"}><p className="text-4xl text-grey font-bold hover:text-orange hover:duration-100">FAQ's</p></Link>
+          <Link href={"/landing"}><p className="text-4xl text-grey font-bold hover:text-orange hover:duration-100">FAQ&apos;s</p></Link>
         </div>
       </div>
     </div>
