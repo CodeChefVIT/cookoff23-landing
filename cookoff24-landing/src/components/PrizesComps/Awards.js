@@ -8,7 +8,7 @@ const Awards = (props) => {
           <p className="px-36 text-8xl font-bold tracking-wide lg:text-6xl cursor-pointer md:text-xl text-center   md:pl-10 justify-self-start">
             {props.title}
           </p>
-          <p className="px-36 h-20 w-[45vw] lg:w-[55vw] text-lg tracking-wide  text-black md:text-xs xl:text-sm md:px-0 md:tracking-tighter">
+          <p className="px-36 h-20 w-[45vw] lg:w-[55vw] text-lg tracking-wide  text-black md:text-xs xl:text-sm md:px-0 md:tracking-tighter mr-10">
             {props.content}
           </p>
         </div>
