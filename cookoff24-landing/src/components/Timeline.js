@@ -1,4 +1,4 @@
-import {color, easeIn, motion} from "framer-motion"
+import { color, motion, easeInOut } from "framer-motion";
 
 const Timeline = () => {
   const events = [
@@ -8,25 +8,36 @@ const Timeline = () => {
     { time: "12:00 PM", event: "Placeholder" },
     { time: "02:00 PM", event: "Event Commences" },
   ];
-  console.log(100/events.length);
+  console.log(100 / events.length);
   return (
-    <div className="h-[100vh] w-[100vw] relative" id="timeline">
-      <div className="text-lg font-normal tracking-[7px] ml-40 sm:ml-10 text-grey pt-2">TIMELINE</div>
-      <div className="flex flex-col h-[85%] mt-10">
-        {events.map((e,index) => {
-          return (<motion.div
-          key={index}
-            // className={`flex ml-40 h-[20%]`}
-            className={`flex ml-40 sm:ml-0 h-[${100/events.length}%] border-b-2 border-grey text-grey sm:text-2xl text-3xl font-semibold z-20 pl-10 justify-around`}
-            whileHover={{
-                backgroundColor:"#EB5939",
-                color:"rgb(13,13,13)",
-            }}
-            transition={{duration:0.2,ease: "circInOut"}}
->
-            <div className=" flex flex-col justify-center">{e.time}</div>
-            <div className="flex flex-col justify-center mx-auto">{e.event}</div>
-          </motion.div>);
+    <div className="h-[100vh] w-[100vw] relative">
+      <div
+        id="proxima"
+        className="text-[16px] md:text-[12px] font-normal tracking-[7px] mx-[13%] md:mx-[10%] text-grey pt-2"
+      >
+        TIMELINE
+      </div>
+      <div id="proximaBold" className="flex flex-col h-[85%] mt-10">
+        {events.map((e, index) => {
+          return (
+            <motion.div
+              key={index}
+              // className={`flex ml-40 h-[20%]`}
+              className={`flex justify-between mx-auto sm:ml-2 sm:gap-[20vw] xs:text-xl h-[${
+                100 / events.length
+              }%] border-b-[2px] border-neutral-600 w-[75%] md:w-full gap-44 text-grey text-3xl font-semibold z-20 px-10`}
+              whileHover={{
+                backgroundColor: "#EB5939",
+                color: "rgb(13,13,13)",
+              }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+            >
+              <div className=" flex flex-col justify-center">{e.time}</div>
+              <div className="flex flex-col justify-center pr-10">
+                {e.event}
+              </div>
+            </motion.div>
+          );
         })}
         {/* <motion.div 
             // className={`flex ml-40 h-[20%]`}
@@ -40,7 +51,6 @@ const Timeline = () => {
             <div className=" flex flex-col justify-center">hh:mm AM</div>
             <div className="flex flex-col justify-center">Place</div>
           </motion.div>         */}
-
       </div>
     </div>
   );

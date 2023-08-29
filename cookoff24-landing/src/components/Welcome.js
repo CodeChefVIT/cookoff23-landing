@@ -18,7 +18,7 @@ const Welcome = () => {
           <motion.button
             className="rounded-[4px] w-[200px] py-2 px-12 bg-orange sm:bg-orange text-black sm:font-semibold font-bold sm:border-dark-grey hover:text-[#fff] text-[18px] md:text-[13px] hover:font-semibold"
             whileTap={{ scale: 1 }}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.1 }}
           >
             Register
           </motion.button>
