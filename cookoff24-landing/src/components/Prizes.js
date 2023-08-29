@@ -13,7 +13,7 @@ const Prizes = () => {
       id="prizes"
       className="min-h-[100vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16"
     >
-      <p className="md:self-center  tracking-[7px] md:text-[10px] mx-[13%] md:mx-[10%] mt-10 mb-10">
+      <p className="md:self-start tracking-[7px] md:text-lg mx-[13%] md:mx-[10%] mt-10 mb-10">
         PRIZES
       </p>
       <div>
@@ -51,7 +51,7 @@ const Prizes = () => {
           <p className="px-36 text-8xl font-bold tracking-wide cursor-pointer md:text-xl lg:text-6xl text-center   md:pl-10 justify-self-start text-orange">
            WOMEN
           </p>
-          <p className="px-36 h-20 w-[45vw] lg:w-[55vw] text-lg tracking-wide text-orange  md:text-xs md:px-0 xl:text-sm md:tracking-tight">
+          <p className="px-36 h-20 w-[45vw] lg:w-[55vw] text-lg tracking-wide text-orange  md:text-xs md:px-0 xl:text-sm md:tracking-tight ">
           You’ll get like 1.5 Lakhs in cash, damm that’s a lot of money. What
             are you going to do with all? I’m gonna buy myself some doge.
           </p>

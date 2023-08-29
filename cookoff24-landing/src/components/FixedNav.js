@@ -9,7 +9,7 @@ import BurgerSVG from "./BurgerSVG";
 import Link from "next/link";
 
 const FixedNav = () => {
-  const isMobile = useMediaQuery("(max-width:632px)");
+  const isMobile = useMediaQuery("(max-width:639px)");
   const [isToggled, setIsToggled] = useState(false);
   const navbarRef = useRef(null);
   useEffect(() => {

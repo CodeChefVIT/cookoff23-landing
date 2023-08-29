@@ -6,8 +6,8 @@ import useMousePosition from "@/utils/useMousePosition";
 
 const About = () => {
   return (
-    <div className="h-[100vh] w-[100vw] relative  cursor-default" id="about">
-      <div className="uppercase text-[16px] md:text-[10px] mx-[13%] md:mx-[10%] text-[#B7AB98] mt-32 mb-10 tracking-[7px]">
+    <div className="h-[100vh] w-[100vw] relative  cursor-default " id="about">
+      <div className="uppercase text-[16px] md:text-lg mx-[13%] md:mx-[10%] text-[#B7AB98] mt-32 mb-10 tracking-[7px]">
         About Event
       </div>
       <div className="body mx-[13%] md:mx-[10%] flex flex-col justify-center items-stretch gap-[8rem] py-16 h-[100vh] text-grey">

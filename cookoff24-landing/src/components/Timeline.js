@@ -10,14 +10,14 @@ const Timeline = () => {
   ];
   console.log(100/events.length);
   return (
-    <div className="h-[100vh] relative" id="timeline">
-      <div className="text-lg font-normal tracking-[7px] md:ml-0 ml-40 text-grey ">TIMELINE</div>
+    <div className="h-[100vh] w-[100vw] relative" id="timeline">
+      <div className="text-lg font-normal tracking-[7px] ml-40 sm:ml-10 text-grey pt-2">TIMELINE</div>
       <div className="flex flex-col h-[85%] mt-10">
         {events.map((e,index) => {
           return (<motion.div
           key={index}
             // className={`flex ml-40 h-[20%]`}
-            className={`flex md:ml-0 ml-40 h-[${100/events.length}%] border-b-2 border-grey text-grey md:text-xl text-3xl font-semibold z-20 pl-10`}
+            className={`flex ml-40 sm:ml-2 sm:gap-[20vw] xs:text-xl h-[${100/events.length}%] border-b-2 border-grey gap-44 text-grey text-3xl font-semibold z-20 px-10`}
             whileHover={{
                 backgroundColor:"#EB5939",
                 color:"rgb(13,13,13)",
