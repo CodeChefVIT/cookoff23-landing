@@ -85,3 +85,12 @@ body {
 #roboto {
   font-family: Roboto;
 }
+
+@font-face {
+  font-family: Proxima;
+  src: url(./../../public/proximaBold.otf);
+}
+
+#proximaBold {
+  font-family: Proxima;
+}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import cclogo from "../assets/cclogo.svg";
 import gotoportal from "../assets/gotoportal.svg";
+import comingsoon from "../assets/comingsoon.svg";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ const RegisterNow = () => {
   };
 
   return (
-    <div className="h-[100vh] w-[100vw] text-grey relative bg-[#060606]">
+    <div className="h-[100vh] w-[100vw] md:hidden text-grey relative bg-[#060606]">
       <div className="h-full w-full flex justify-center items-center">
         <motion.div
           onMouseEnter={handleHover}
@@ -55,7 +56,7 @@ const RegisterNow = () => {
               >
                 <Image
                   className="my-14"
-                  src={gotoportal}
+                  src={comingsoon}
                   quality={100}
                   alt="Portal"
                 />

@@ -1,7 +1,7 @@
 const BurgerSVG = ({ setIsToggled }) => {
   return (
     <svg
-      className="absolute w-14 h-14 top-5 right-5 z-40"
+      className="fixed w-14 h-14 top-5 right-5 z-40"
     //   className="absolute w-14 h-14 top-5 left-[26rem] z-40"
       viewBox="0 0 617 617"
       fill="none"
