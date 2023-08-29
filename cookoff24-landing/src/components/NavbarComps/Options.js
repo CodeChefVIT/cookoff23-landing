@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Options = () => {
@@ -7,60 +8,68 @@ const Options = () => {
       className=" flex flex-col text-[#AA9E8B] text-sm font-bold tracking-wider gap-2 items-end"
     >
       <div className="group transition ease-in-out">
-        <p
+        <Link
+          href="#about"
           className=" absolute origin-top transition-transform duration-200 ease-in-out group-hover:scale-y-0"
           style={{ transitionDelay: "1ms" }}
         >
           ABOUT EVENT
-        </p>
-        <p
+        </Link>
+        <Link
+          href="#about"
           className=" origin-bottom transition-transform duration-200 ease-in-out scale-y-0 group-hover:scale-y-100"
           style={{ transitionDelay: "1ms" }}
         >
           ABOUT EVENT
-        </p>
+        </Link>
       </div>
       <div className="group transition ease-in-out">
-        <p
+        <Link
+          href="#timeline"
           className=" absolute origin-top transition-transform duration-200 ease-in-out group-hover:scale-y-0"
           style={{ transitionDelay: "1ms" }}
         >
           TIMELINE
-        </p>
-        <p
+        </Link>
+        <Link
+          href="#timeline"
           className=" origin-bottom transition-transform duration-200 ease-in-out scale-y-0 group-hover:scale-y-100"
           style={{ transitionDelay: "1ms" }}
         >
           TIMELINE
-        </p>
+        </Link>
       </div>
       <div className="group transition ease-in-out">
-        <p
+        <Link
+          href="#prizes"
           className=" absolute origin-top transition-transform duration-200 ease-in-out group-hover:scale-y-0"
           style={{ transitionDelay: "1ms" }}
         >
           PRIZES
-        </p>
-        <p
+        </Link>
+        <Link
+          href="#prizes"
           className=" origin-bottom transition-transform duration-200 ease-in-out scale-y-0 group-hover:scale-y-100"
           style={{ transitionDelay: "1ms" }}
         >
           PRIZES
-        </p>
+        </Link>
       </div>
       <div className="group transition ease-in-out">
-        <p
+        <Link
+          href="#faqs"
           className=" absolute origin-top transition-transform duration-200 ease-in-out group-hover:scale-y-0"
           style={{ transitionDelay: "1ms" }}
         >
           FAQs
-        </p>
-        <p
+        </Link>
+        <Link
+          href="#faqs"
           className=" origin-bottom transition-transform duration-200 ease-in-out scale-y-0 group-hover:scale-y-100"
           style={{ transitionDelay: "1ms" }}
         >
           FAQs
-        </p>
+        </Link>
       </div>
     </div>
   );

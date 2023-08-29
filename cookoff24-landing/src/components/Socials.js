@@ -14,8 +14,11 @@ const Socials = () => {
       </div>
       <div className="flex flex-col justify-between py-20 items-center lg:py-2 sm:hidden">
         <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
+      <div className="flex flex-col justify-between py-20 items-center lg:py-2 sm:hidden">
+        <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
           CODECHEF VIT
         </div>
+        <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
         <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
           COOKOFF 8.0
         </div>
@@ -31,6 +34,8 @@ const Socials = () => {
           </Link>
         </div>
       </div>
+      <div className="flex flex-col py-20 lg:py-2">
+        <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
       <div className="flex flex-col py-20 lg:py-2">
         <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
           OTHER EVENTS
@@ -52,6 +57,8 @@ const Socials = () => {
           </Link>
         </div>
       </div>
+      <div className="flex flex-col py-20 lg:py-2">
+        <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
       <div className="flex flex-col py-20 lg:py-2">
         <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
           NAVIGATION
