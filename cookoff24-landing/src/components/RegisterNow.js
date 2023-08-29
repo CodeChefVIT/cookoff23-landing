@@ -9,7 +9,6 @@ import Link from "next/link";
 
 const RegisterNow = () => {
   const isMobile = useMediaQuery("(max-width:639px)");
-  const isMobile = useMediaQuery("(max-width:639px)");
   const [isHovered, setIsHovered] = useState(false);
   const handleHover = () => {
     setIsHovered(!isHovered);

@@ -6,7 +6,7 @@ import TraingleSVG from "./TraingleSVG";
 
 const Socials = () => {
   return (
-    <div className="flex ml-40 py-10 border-t-2 border-grey h-[57vh] gap-[7vw] mdl:ml-20 sm:ml-5 sm:justify-between sm:px-5">
+    <div className="flex mx-[13%] md:mx-[10%] py-10 border-t-2 border-grey h-[330px] gap-[7vw] mdl:ml-20 sm:ml-5 sm:justify-between sm:px-5">
       {/* <div className="flex ml-40 py-10 border-t-2 border-grey h-[57vh] gap-20 "> */}
 
       <div className="flex flex-col justify-center lg:hidden">
@@ -14,11 +14,8 @@ const Socials = () => {
       </div>
       <div className="flex flex-col justify-between py-20 items-center lg:py-2 sm:hidden">
         <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
-      <div className="flex flex-col justify-between py-20 items-center lg:py-2 sm:hidden">
-        <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
           CODECHEF VIT
         </div>
-        <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
         <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
           COOKOFF 8.0
         </div>
@@ -29,13 +26,11 @@ const Socials = () => {
               whileTap={{ scale: 1 }}
               whileHover={{ scale: 1.1 }}
             >
-              REGISTER
+              Register
             </motion.button>
           </Link>
         </div>
       </div>
-      <div className="flex flex-col py-20 lg:py-2">
-        <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
       <div className="flex flex-col py-20 lg:py-2">
         <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
           OTHER EVENTS
@@ -57,8 +52,6 @@ const Socials = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col py-20 lg:py-2">
-        <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
       <div className="flex flex-col py-20 lg:py-2">
         <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
           NAVIGATION
