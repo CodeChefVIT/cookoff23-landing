@@ -29,9 +29,9 @@ const Countdown = () => {
   });
   
   return (
-    <div className="h-[100vh] w-[100vw] text-grey text-9xl font-bold  mx-32 flex flex-col gap-64 pt-10">
-      <div className="text-lg font-normal tracking-[7px]">COUNTDOWN</div>
-      <div className="flex gap-96 ml-16 sm:flex-col md:gap-16 justify-items-center">
+    <div className="h-[100vh] w-[100vw] text-grey text-9xl font-bold flex flex-col gap-64 pt-10">
+      <div className="text-lg font-normal tracking-[7px] mx-[13%] md:mx-[10%]">COUNTDOWN</div>
+      <div className="md:mx-0 mx-[13%] md:w-full w-5/6 flex md:flex-col md:gap-16 justify-around items-center">
       <div className="flex flex-col justify-center">
         <div className="flex flex-col justify-center text-center">
           {countdown.days}

@@ -30,6 +30,7 @@ import SocialsMask from "@/components/SocialsMask";
 import FillerMask from "@/components/FillerMask";
 import FillerMask2 from "@/components/FillerMask2";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,40 +56,46 @@ export default function Home() {
   const { x, y } = useMousePosition();
 
   return (
-    <main className="h-[980vh] w-[100vw] relative cursor-default overflow-x-hidden">
-      <div className="absolute w-[100vw]">
-        <FixedNav />
-        <Welcome />
-        <About />
-        <Timeline />
-        <Banner />
-        <RegisterNow />
-        <Prizes />
-        <Countdown />
-        <OtherEvents />
-        <Faqs />
-        <Socials />
-      </div>
-      {isNotMobile && (
-        <motion.div
-          animate={{
-            WebkitMaskPosition: `${x - size / 2}px ${
-              y - size / 2 + scrollPosition
-            }px`,
-            WebkitMaskSize: `${size}px`,
-          }}
-          transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
-          className="one mask-content -z-30"
-        >
-          <WelcomeMask />
-          <AboutMask />
-          <FillerMask />
-          <FillerMask2 />
-          <CountdownMask />
-          <FillerMask2 />
-          <FillerMask2 />
-        </motion.div>
-      )}
-    </main>
+    <>
+      <Head>
+        <title>Cook-off 8.0</title>
+        <link rel="icon" href="/Favicon.png" />
+      </Head>
+          <FixedNav />
+      <main className="h-[980vh] w-[100vw] relative cursor-default overflow-x-hidden">
+        <div className="absolute w-[100vw]">
+          <Welcome />
+          <About />
+          <Timeline />
+          <Banner />
+          <RegisterNow />
+          <Prizes />
+          <Countdown />
+          <OtherEvents />
+          <Faqs />
+          <Socials />
+        </div>
+        {isNotMobile && (
+          <motion.div
+            animate={{
+              WebkitMaskPosition: `${x - size / 2}px ${
+                y - size / 2 + scrollPosition
+              }px`,
+              WebkitMaskSize: `${size}px`,
+            }}
+            transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
+            className="one mask-content -z-30"
+          >
+            <WelcomeMask />
+            <AboutMask />
+            <FillerMask />
+            <FillerMask2 />
+            <CountdownMask />
+            <FillerMask2 />
+            <FillerMask2 />
+          </motion.div>
+        )}
+      </main>
+    </>
   );
 }

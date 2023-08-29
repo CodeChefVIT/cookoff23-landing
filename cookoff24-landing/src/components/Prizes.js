@@ -10,7 +10,7 @@ const Prizes = () => {
   };
   return (
     <div
-      id="proxima"
+      id="prizes"
       className="min-h-[100vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16"
     >
       <p className="md:self-center  tracking-[7px] md:text-[10px] mx-[13%] md:mx-[10%] mt-10 mb-10">

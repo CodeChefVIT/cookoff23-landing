@@ -6,7 +6,7 @@ import TraingleSVG from "./TraingleSVG";
 
 const Socials = () => {
   return (
-    <div className="flex ml-40 py-10 border-t-2 border-grey h-[57vh] gap-20">
+    <div className="flex ml-40 py-10 border-t-2 border-grey h-[57vh] gap-20" id="socials">
       <div className="flex flex-col justify-center">
         <ChefCapSVG />
       </div>

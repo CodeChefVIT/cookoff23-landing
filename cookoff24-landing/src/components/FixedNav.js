@@ -42,12 +42,13 @@ const FixedNav = () => {
   return (
     <div>
       {isToggled ? (
-        <div className="fixed right-0 h-screen w-5/12 bg-orange z-40 flex flex-col pl-10 justify-evenly" ref={navbarRef}>
+        <div className="fixed right-0 h-screen w-1/2 bg-orange z-40 flex flex-col items-center justify-evenly" ref={navbarRef}>
           <Link href="/landing" className="text-3xl font-black">Home</Link>
-          <Link href="/landing" className="text-3xl font-black">About</Link>
-          <Link href="/landing" className="text-3xl font-black">Timeline</Link>
-          <Link href="/landing" className="text-3xl font-black">FAQ&apos;s</Link>
-          <Link href="/landing" className="text-3xl font-black">Socials</Link>
+          <Link href="#about" className="text-3xl font-black" onClick={()=>setIsToggled(false)}>About</Link>
+          <Link href="#timeline" className="text-3xl font-black">Timeline</Link>
+          <Link href="#prizes" className="text-3xl font-black">Prizes</Link>
+          <Link href="#faqs" className="text-3xl font-black">FAQ&apos;s</Link>
+          <Link href="#socials" className="text-3xl font-black">Socials</Link>
         </div>
       ) : (
         <BurgerSVG setIsToggled={setIsToggled} />
