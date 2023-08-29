@@ -17,7 +17,7 @@ const Timeline = () => {
           return (<motion.div
           key={index}
             // className={`flex ml-40 h-[20%]`}
-            className={`flex ml-40 sm:ml-2 sm:gap-[20vw] xs:text-xl h-[${100/events.length}%] border-b-2 border-grey gap-44 text-grey text-3xl font-semibold z-20 px-10`}
+            className={`flex ml-40 sm:ml-2 sm:gap-[20vw] xs:text-xl h-[${100/events.length}%] border-b-2 border-grey gap-44 text-grey text-3xl font-semibold z-20 px-10 border-opacity-50`}
             whileHover={{
                 backgroundColor:"#EB5939",
                 color:"rgb(13,13,13)",
@@ -28,19 +28,6 @@ const Timeline = () => {
             <div className="flex flex-col justify-center">{e.event}</div>
           </motion.div>);
         })}
-        {/* <motion.div 
-            // className={`flex ml-40 h-[20%]`}
-            className={`flex ml-40 h-[${100/events.length}%] border-b-2 border-grey gap-44 text-grey text-3xl font-semibold z-20 px-10`}
-            whileHover={{
-                backgroundColor:"#EB5939",
-                color:"rgb(13,13,13)",
-            }}
-            transition={{duration:0.2,ease: "circInOut"}}
->
-            <div className=" flex flex-col justify-center">hh:mm AM</div>
-            <div className="flex flex-col justify-center">Place</div>
-          </motion.div>         */}
-
       </div>
     </div>
   );
