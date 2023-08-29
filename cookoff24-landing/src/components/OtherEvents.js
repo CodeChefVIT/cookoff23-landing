@@ -12,7 +12,10 @@ const OtherEvents = () => {
   };
   return (
     <div className="h-[60vh] w-[100vw] relative z-10">
-      <div className="uppercase text-[16px] md:text-[10px] text-[#B7AB98] mx-[13%] md:mx-[10%] mt-20 mb-10 tracking-[7px]">
+      <div
+        id="proxima"
+        className="uppercase text-[16px] md:text-[10px] text-[#B7AB98] mx-[13%] md:mx-[10%] mt-20 mb-10 tracking-[7px]"
+      >
         other events
       </div>
       <div className="flex w-full h-full justify-evenly items-center">
