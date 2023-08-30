@@ -62,7 +62,7 @@ const Countdown = () => {
               isHovered1
                 ? `text-[#eb5939] duration-300`
                 : `text-grey duration-300`
-            }`}
+            } z-10`}
           >
             {countdown.days}
           </div>
@@ -71,7 +71,7 @@ const Countdown = () => {
               isHovered1
                 ? `text-grey duration-300`
                 : `text-[#eb5939] duration-300`
-            }`}
+            } z-10`}
           >
             DAYS
           </div>
@@ -79,7 +79,7 @@ const Countdown = () => {
         <motion.div
           onMouseEnter={handleHover2}
           onMouseLeave={handleHover2}
-          className="flex flex-col justify-center items-center w-[220px] lg:w-[180px] mx-7 relative"
+          className="flex flex-col justify-center items-center w-[220px] lg:w-[180px] mx-7 relative z-10"
         >
           <div
             className={`flex justify-center text-center pl-2 md:pr-1 text-9xl lg:text-8xl md:text-7xl sm:text-7xl relative ${
@@ -95,7 +95,7 @@ const Countdown = () => {
               isHovered2
                 ? `text-grey duration-300`
                 : `text-[#eb5939] duration-300`
-            }`}
+            } z-10`}
           >
             HOURS
           </div>
@@ -110,7 +110,7 @@ const Countdown = () => {
               isHovered3
                 ? `text-[#eb5939] duration-300`
                 : `text-grey duration-300`
-            }`}
+            } z-10`}
           >
             {countdown.days}
           </div>
@@ -119,7 +119,7 @@ const Countdown = () => {
               isHovered3
                 ? `text-grey duration-300`
                 : `text-[#eb5939] duration-300`
-            }`}
+            } z-10`}
           >
             MINUTES
           </div>
