@@ -25,30 +25,53 @@ const FixedNav = () => {
 
   if (!isMobile) {
     return (
-      <div className="fixed h-screen w-screen text-orange">
-        <div className="flex justify-between p-12 md:p-6">
-          <div className="h-16 w-auto cursor-pointer logo z-40">
+      // <div className="fixed h-screen w-screen text-orange z-40">
+      <>
+        {/* <div className="fixed flex justify-between p-12 md:p-6 border-2 border-orange "> */}
+          <div className=" fixed h-16 w-auto cursor-pointer logo top-5 left-10">
             <Image className="h-16 w-auto sm:h-12" src={cclogo} alt="CC Logo" />
           </div>
-          <Options />
-        </div>
-        <div className="absolute left-[3.7rem] bottom-40 sm:hidden">
+          <div className="fixed z-40 top-5 right-10">
+            <Options />
+          </div>
+        {/* </div> */}
+        <div className="fixed left-[3.7rem] bottom-40 sm:hidden z-40">
           <SocialHandles />
         </div>
-      </div>
+      </>
+      // </div>
     );
   }
 
   return (
     <div>
       {isToggled ? (
-        <div className="fixed right-0 h-screen w-1/2 bg-orange z-40 flex flex-col items-center justify-evenly" ref={navbarRef}>
-          <Link href="/landing" className="text-3xl font-black">Home</Link>
-          <Link href="#about" className="text-3xl font-black" onClick={()=>setIsToggled(false)}>About</Link>
-          <Link href="#timeline" className="text-3xl font-black">Timeline</Link>
-          <Link href="#prizes" className="text-3xl font-black">Prizes</Link>
-          <Link href="#faqs" className="text-3xl font-black">FAQ&apos;s</Link>
-          <Link href="#socials" className="text-3xl font-black">Socials</Link>
+        <div
+          className="fixed right-0 h-screen w-1/2 bg-orange z-40 flex flex-col items-center justify-evenly"
+          ref={navbarRef}
+        >
+          <Link href="/landing" className="text-3xl font-black">
+            Home
+          </Link>
+          <Link
+            href="#about"
+            className="text-3xl font-black"
+            onClick={() => setIsToggled(false)}
+          >
+            About
+          </Link>
+          <Link href="#timeline" className="text-3xl font-black">
+            Timeline
+          </Link>
+          <Link href="#prizes" className="text-3xl font-black">
+            Prizes
+          </Link>
+          <Link href="#faqs" className="text-3xl font-black">
+            FAQ&apos;s
+          </Link>
+          <Link href="#socials" className="text-3xl font-black">
+            Socials
+          </Link>
         </div>
       ) : (
         <BurgerSVG setIsToggled={setIsToggled} />
