@@ -85,6 +85,10 @@ export default function Home() {
             <FillerMask2 />
             <FillerMask2 />
             <FillerMask2 />
+            <FillerMask2 />
+            <FillerMask2 />
+            <FillerMask2 />
+            <FillerMask2 />
           </motion.div>
         )}
       </main>
