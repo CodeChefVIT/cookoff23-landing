@@ -1,10 +1,17 @@
 import React from "react";
 import ChefCapSVG from "./ChefCapSVG";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import TraingleSVG from "./TraingleSVG";
-
+import Image from "next/image";
+import insta from "../../public/insta.svg";
+import linkedin from "../../public/linkedin.svg";
+import githubmark from "../../public/githubmark.svg";
+import twitter from "../../public/twitter.svg";
+import useMediaQuery from "@/hooks/useMediaQuery";
 const Socials = () => {
+  const isMobile = useMediaQuery("(max-width:639px)");
+
   return (
     <div
       className="flex mx-[13%] md:mx-[10%] py-10 border-t-2 border-grey h-[330px] gap-[7vw] mdl:ml-20 sm:ml-5 sm:justify-between sm:px-5"
@@ -54,6 +61,23 @@ const Socials = () => {
             </p>
           </Link>
         </div>
+
+        {isMobile && (
+          <div className="flex items-center gap-3 mt-[5vh]">
+            <a href="https://github.com/CodeChefVIT">
+              <Image src={githubmark} alt="img" className="h-10 w-10" />
+            </a>
+            <a href="https://www.instagram.com/codechefvit/T">
+              <Image src={insta} alt="img" className="h-10 w-10" />
+            </a>
+            <a href="https://twitter.com/codechefvit">
+              <Image src={twitter} alt="img" className="h-10 w-10" />
+            </a>
+            <a href="https://www.linkedin.com/company/codechef-vit-chapter/mycompany/">
+              <Image src={linkedin} alt="img" className="h-10 w-10" />
+            </a>
+          </div>
+        )}
       </div>
       <div className="flex flex-col py-20 lg:py-2">
         <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">

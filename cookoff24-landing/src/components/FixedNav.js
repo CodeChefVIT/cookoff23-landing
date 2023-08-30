@@ -53,7 +53,7 @@ const FixedNav = () => {
       // <div className="fixed h-screen w-screen text-orange z-40">
       <>
         {/* <div className="fixed flex justify-between p-12 md:p-6 border-2 border-orange "> */}
-        <div className=" fixed h-16 w-auto cursor-pointer logo top-5 left-10">
+        <div className=" fixed h-16 w-auto cursor-pointer logo top-5 left-10 z-10">
           <Image className="h-16 w-auto sm:h-12" src={cclogo} alt="CC Logo" />
         </div>
         <div className="fixed z-40 top-5 right-10">
@@ -153,6 +153,16 @@ const FixedNav = () => {
             onClick={() => setIsToggled(false)}
           >
             FAQ&apos;s
+          </Link>
+          <Link
+            to="socials"
+            spy={true}
+            smooth={true}
+            offset={-5}
+            className="text-3xl font-black tracking-widest"
+            onClick={() => setIsToggled(false)}
+          >
+            Socials
           </Link>
         </div>
       ) : (

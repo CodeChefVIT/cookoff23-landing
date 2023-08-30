@@ -40,7 +40,7 @@ const Countdown = () => {
   });
 
   return (
-    <div className="h-[90vh] md:h-[70vh] w-[80vw] relative">
+    <div className="min-h-[90vh] md:h-[70vh] w-[80vw] relative xs:my-10 flex flex-col gap-[10vh]">
       <div
         id="proxima"
         className="uppercase text-[16px] md:text-[10px] mx-[17%] md:mx-[10%] text-[#B7AB98] mt-28 mb-10 tracking-[7px]"
@@ -49,7 +49,7 @@ const Countdown = () => {
       </div>
       <div
         id="proximaBold"
-        className="flex justify-evenly sm:justify-around items-center h-full w-full sm:flex-col mx-[13%] md:mx-[10%] -mt-10 relative"
+        className="flex justify-evenly sm:justify-around items-center h-full w-full sm:flex-col mx-[13%] md:mx-[10%] mt-10 relative"
       >
         {/* <div className="flex gap-96 ml-16 sm:ml-2 sm:flex-col md:gap-16 justify-items-center"> */}
         <motion.div
