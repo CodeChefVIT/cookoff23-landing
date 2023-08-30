@@ -1,118 +1,170 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import React, { useEffect } from "react";
+import Head from "next/head";
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { Inter } from "next/font/google";
+import SVGAnimation from "@/components/SVGAnimation";
+import SVGAnimation2 from "@/components/SVGAnimation2";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
-export default function Home() {
+const Index = () => {
+  const isDesktop = useMediaQuery("(min-width: 1079px)");
+  /* Cursor following div states*/
+
+  // I want to make a state to store the current position of cursor
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setCursorPos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+  const cursorVariants = {
+    default: {
+      x: cursorPos.x - 20,
+      y: cursorPos.y - 20,
+    },
+    notDefault: {
+      x: cursorPos.x - 20,
+      y: cursorPos.y - 20,
+      scale: 5,
+      mixBlendMode: "difference",
+    },
+    notDefaultButBigger: {
+      x: cursorPos.x - 20,
+      y: cursorPos.y - 20,
+      scale: 750,
+      mixBlendMode: "difference",
+    },
+  };
+
+  /*Icon Animation*/
+
+  const [fill, setFill] = useState("#B7AB98");
+  const [currentVaraint, setCurrentVariant] = useState("default");
+  // const [curDem, setCurDem] = useState({w:10,h:10});
+  const onIconEnter = () => {
+    setFill("#FFFFFF");
+    // setCurDem({w:20, h:20})
+    setCurrentVariant("notDefault");
+  };
+  const onIconLeave = () => {
+    setFill("#B7AB98");
+    // setCurDem({w:10, h:10})
+    setCurrentVariant("default");
+  };
+
+  /*Chef Drag Animation */
+  const [hasClicked, setHasClicked] = useState(false);
+  const eleRef = useRef(null);
+  useEffect(() => {
+    const clicked = (e) => {
+      if (eleRef.current === e.target) {
+        setHasClicked(true);
+      }
+    };
+    window.addEventListener("click", clicked);
+
+    return () => {
+      window.removeEventListener("click", clicked);
+    };
+  }, []);
+  console.log(hasClicked);
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <Head>
+        <title>Cook-off 8.0</title>
+        <link rel="icon" href="/Favicon.png" />
+      </Head>
+
+      {/* body container */}
+      <div className="h-[100vh] w-[100vw] text-grey flex justify-center justify-items-center no-selection">
+        {isDesktop && (
+          <motion.div
+            // className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center text-9xl font-bold text-black`}
+            className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center ${
+              hasClicked ? "text-[87px] xl:text-[70px] md:text-[60px]" : "text-9xl xl:text-8xl"
+            } font-bold text-black`}
+            onMouseEnter={() => {
+              setCurrentVariant("notDefault");
+            }}
+            onMouseLeave={() => {
+              setCurrentVariant("default");
+            }}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            {hasClicked
+              ? "LOOK HOW THEY BUTCHERED MY BOY"
+              : "DO NOT DARE DRAG OUR CHEF"}
+          </motion.div>
+        )}
+        {/* main flex */}
+        <div className="flex flex-col justify-center justify-items-center gap-36 ">
+          <div className={`-mt-24 relative text-4xl font-semibold hover:opacity-0 text-black h-[15vh] flex justify-items-center ${currentVaraint=="notDefault"? "opacity-0" : "opacity-100"}`}>Please turn off dark mode</div>
+          {/* icon */}
+          <div
+            className=" flex justify-center relative before:absolute before:bg-dark-grey before:h-56 before:w-56 before:-z-10 before:-bottom-16 before:rounded-full"
+            onMouseEnter={onIconEnter}
+            onMouseLeave={onIconLeave}
+            ref={eleRef}
+          >
+            {hasClicked ? (
+              <SVGAnimation2 />
+            ) : (
+              <SVGAnimation fill={fill} setHasClicked={setHasClicked} />
+            )}
+          </div>
+
+          {/* button */}
+          <div className="flex justify-center ">
+            <Link href={"/landing"}>
+              <motion.button
+                className={`text-grey text-xl rounded-full border-2 border-grey w-56 py-3 ${inter.className}  hover:bg-[#de4c2c] hover:border-4 hover:text-black hover:font-bold bg-[#0d0d0d] hover:border-[#de4c2c]`}
+                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                START
+              </motion.button>
+            </Link>
+          </div>
         </div>
+
+        {/* cursor div */}
+        {isDesktop && (
+          <motion.div
+            className="bg-orange w-10 h-10 fixed rounded-full left-0 top-0 -z-10"
+            variants={cursorVariants}
+            // animate="default"
+            animate={currentVaraint}
+          />
+        )}
+        {isDesktop && (
+          <motion.div
+            className={`w-1/3 absolute h-screen right-10 break-normal justify-items-center ${
+              hasClicked ? "text-[87px] xl:text-[70px] md:text-[60px]" : "text-9xl xl:text-8xl"
+            } font-bold text-black`}
+            onMouseEnter={() => {
+              setCurrentVariant("notDefault");
+            }}
+            onMouseLeave={() => {
+              setCurrentVariant("default");
+            }}
+          >
+            {hasClicked
+              ? "LOOK HOW THEY BUTCHERED MY BOY"
+              : "DO NOT DARE DRAG OUR CHEF"}
+          </motion.div>
+        )}
       </div>
+    </>
+  );
+};
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Index;
