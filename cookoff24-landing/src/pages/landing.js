@@ -1,12 +1,10 @@
 "use client";
 import useMousePosition from "../utils/useMousePosition";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import FixedNav from "@/components/FixedNav";
 import About from "@/components/About";
 import Timeline from "@/components/Timeline";
 import Countdown from "@/components/Countdown";
-import Banner from "@/components/Banner";
 import Prizes from "@/components/Prizes";
 import Faqs from "@/components/Faqs";
 import RegisterNow from "@/components/RegisterNow";
@@ -16,17 +14,10 @@ import Welcome from "@/components/Welcome";
 import { useAppContext } from "@/context/appContext";
 // import styles from "../styles/page.module.css";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import AboutMask from "@/components/AboutMask";
 import WelcomeMask from "@/components/WelcomeMask";
 import CountdownMask from "@/components/CountdownMask";
-import BannerMask from "@/components/BannerMask";
-import RegisterNowMask from "@/components/RegisterNowMask";
-import PrizesMask from "@/components/PrizesMask";
-import TimelineMask from "@/components/TimelineMask";
-import OtherEventsMask from "@/components/OtherEventsMask";
-import FaqsMask from "@/components/FaqsMask";
-import SocialsMask from "@/components/SocialsMask";
 import FillerMask from "@/components/FillerMask";
 import FillerMask2 from "@/components/FillerMask2";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -62,12 +53,11 @@ export default function Home() {
         <link rel="icon" href="/Favicon.png" />
       </Head>
           <FixedNav />
-      <main className="h-[980vh] w-[100vw] relative cursor-default overflow-x-hidden">
+      <main className="h-[1090vh] sm:h-[950vh] w-[100vw] relative cursor-default overflow-x-hidden">
         <div className="absolute w-[100vw]">
           <Welcome />
           <About />
           <Timeline />
-          <Banner />
           <RegisterNow />
           <Prizes />
           <Countdown />
@@ -89,8 +79,10 @@ export default function Home() {
             <WelcomeMask />
             <AboutMask />
             <FillerMask />
-            <FillerMask2 />
             <CountdownMask />
+            <FillerMask2 />
+            <FillerMask2 />
+            <FillerMask2 />
             <FillerMask2 />
             <FillerMask2 />
           </motion.div>

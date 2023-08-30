@@ -10,7 +10,7 @@ const Timeline = () => {
   ];
   console.log(100 / events.length);
   return (
-    <div className="h-[100vh] w-[100vw] relative">
+    <div className="h-[100vh] w-[100vw] relative xs:my-10" id="timeline">
       <div
         id="proxima"
         className="text-[16px] md:text-[12px] font-normal tracking-[7px] mx-[13%] md:mx-[10%] text-grey pt-2"
@@ -39,18 +39,6 @@ const Timeline = () => {
             </motion.div>
           );
         })}
-        {/* <motion.div 
-            // className={`flex ml-40 h-[20%]`}
-            className={`flex ml-40 h-[${100/events.length}%] border-b-2 border-grey gap-44 text-grey text-3xl font-semibold z-20 px-10`}
-            whileHover={{
-                backgroundColor:"#EB5939",
-                color:"rgb(13,13,13)",
-            }}
-            transition={{duration:0.2,ease: "circInOut"}}
->
-            <div className=" flex flex-col justify-center">hh:mm AM</div>
-            <div className="flex flex-col justify-center">Place</div>
-          </motion.div>         */}
       </div>
     </div>
   );
