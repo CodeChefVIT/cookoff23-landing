@@ -25,17 +25,13 @@ const AboutMask = () => {
         onMouseLeave={() => {
           setIsHovered(false);
         }}
-        className="body mx-[13%] md:mx-[10%] flex flex-col justify-center items-stretch gap-[8rem] py-16 h-[100vh] text-dark-grey"
+        className="body mx-[13%] md:mx-[10%] flex flex-col justify-center items-stretch gap-[8rem] py-4 h-[100vh] text-dark-grey"
       >
         <p
           id="proxima"
           className="text-justify text-4xl tracking-wide font-bold leading-relaxed lg:text-2xl lg:tracking-wide lg:font-semibold sm:text-2xl sm:tracking-wide sm:font-semibold"
         >
-          Cook off is <span className="text-white">CodeChef VIT</span>&apos;s
-          flagship competitive coding event that tests the coding skills of tech
-          participants to develop their competitive coding skills and test their
-          abilities. Cook Off 7.0 will be the seventh edition through which we
-          hope to broaden the horizons of the participants.
+          No, cookoff isn’t your annual culinary challenge, in fact, it is one of codechef vit’s largest competitive coding event. Join us for the ultimate showdown of brains and bytes where a combination of a battle of wits, an algorithmic apocalypse, and a laugh riot, all rolled into one welcomes you and keeps you on the edge of your seat. So whether you're a code sensei or a debugging diva, this competition is for you!
         </p>
       </div>
     </div>

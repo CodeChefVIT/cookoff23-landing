@@ -65,7 +65,7 @@ const FixedNav = () => {
           }`}
         >
           <Link to="welcome" spy={true} smooth={true} offset={-5}>
-            <motion.svg
+            <svg
               viewBox="0 0 617 617"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -73,12 +73,19 @@ const FixedNav = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <circle cx="308.5" cy="308.5" r="308.5" fill="#EB5939" />
+              <circle
+                cx="308.5"
+                cy="308.5"
+                r="303.5"
+                fill="#EB5939"
+                stroke="black"
+                stroke-width="10"
+              />
               <path
                 d="M308 142L221.397 292H394.603L308 142ZM293 277V475H323V277H293Z"
                 fill="black"
               />
-            </motion.svg>
+            </svg>
           </Link>
         </div>
         {/* </div> */}
