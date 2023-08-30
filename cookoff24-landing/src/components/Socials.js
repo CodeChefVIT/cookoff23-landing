@@ -13,7 +13,7 @@ const Socials = () => {
         <ChefCapSVG />
       </div>
       <div className="flex flex-col justify-between py-20 items-center lg:py-2 sm:hidden">
-        <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
+        <div className="text-lg font-normal tracking-[6px] mdl:tracking-[2px] text-grey ">
           CODECHEF VIT
         </div>
         <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
