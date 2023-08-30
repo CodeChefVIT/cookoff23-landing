@@ -9,7 +9,7 @@ const Prizes = () => {
     setIsHovered(hoverState);
   };
   return (
-    <div className="h-[100vh] sm:h-[67vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16">
+    <div className="h-[100vh] sm:h-[67vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16" id="prizes">
       <div
         id="proxima"
         className="text-[16px] md:text-[12px] font-normal tracking-[7px] mx-[13%] md:mx-[10%] text-grey pt-2"

@@ -6,7 +6,7 @@ import SocialHandles from "./NavbarComps/SocialHandles";
 import { motion } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import BurgerSVG from "./BurgerSVG";
-import Link from "next/link";
+import {Link} from "react-scroll"
 
 const FixedNav = () => {
   const isMobile = useMediaQuery("(max-width:639px)");
@@ -22,7 +22,17 @@ const FixedNav = () => {
     document.addEventListener("click", handleOutsideClick);
     return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
-
+  
+  const navVar = {
+    hidden:{
+      opacity:0,
+      x:-10
+    },
+    visible:{
+      opacity:100,
+      x:10
+    }
+  }
   if (!isMobile) {
     return (
       // <div className="fixed h-screen w-screen text-orange z-40">
@@ -47,30 +57,39 @@ const FixedNav = () => {
     <div>
       {isToggled ? (
         <div
-          className="fixed right-0 h-screen w-1/2 bg-orange z-40 flex flex-col items-center justify-evenly"
-          ref={navbarRef}
+          className="fixed right-0 h-screen w-1/2 bg-gradient-to-r from-red-600 to-orange z-40 flex flex-col items-center justify-evenly"
+          ref={navbarRef} 
         >
-          <Link href="/landing" className="text-3xl font-black">
+          <Link to="welcome" spy={true} smooth={true} offset={-5} className="text-3xl font-black tracking-widest"
+            onClick={() => setIsToggled(false)}
+          
+          >
             Home
           </Link>
           <Link
-            href="#about"
-            className="text-3xl font-black"
+            to="about" spy={true} smooth={true} offset={-5}
+            className="text-3xl font-black tracking-widest"
             onClick={() => setIsToggled(false)}
           >
             About
           </Link>
-          <Link href="#timeline" className="text-3xl font-black">
+          <Link to="timeline" spy={true} smooth={true} offset={-5} className="text-3xl font-black tracking-widest"
+            onClick={() => setIsToggled(false)}
+          
+          >
             Timeline
           </Link>
-          <Link href="#prizes" className="text-3xl font-black">
+          <Link to="prizes" spy={true} smooth={true} offset={-5} className="text-3xl font-black tracking-widest"
+            onClick={() => setIsToggled(false)}
+          
+          >
             Prizes
           </Link>
-          <Link href="#faqs" className="text-3xl font-black">
+          <Link to="faqs" spy={true} smooth={true} offset={-5} className="text-3xl font-black tracking-widest"
+            onClick={() => setIsToggled(false)}
+          
+          >
             FAQ&apos;s
-          </Link>
-          <Link href="#socials" className="text-3xl font-black">
-            Socials
           </Link>
         </div>
       ) : (
