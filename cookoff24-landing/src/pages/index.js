@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 import Link from "next/link";
 
 const Index = () => {
-  const isDesktop = useMediaQuery("(min-width: 965px)");
+  const isDesktop = useMediaQuery("(min-width: 1079px)");
   /* Cursor following div states*/
 
   // I want to make a state to store the current position of cursor
@@ -91,7 +91,7 @@ const Index = () => {
           <motion.div
             // className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center text-9xl font-bold text-black`}
             className={`w-1/3 absolute h-screen left-10 whitespace-normal justify-items-center ${
-              hasClicked ? "text-[87px]" : "text-9xl"
+              hasClicked ? "text-[87px] xl:text-[70px] md:text-[60px]" : "text-9xl xl:text-8xl"
             } font-bold text-black`}
             onMouseEnter={() => {
               setCurrentVariant("notDefault");
@@ -107,6 +107,7 @@ const Index = () => {
         )}
         {/* main flex */}
         <div className="flex flex-col justify-center justify-items-center gap-36 ">
+          <div className={`-mt-24 relative text-4xl font-semibold hover:opacity-0 text-black h-[15vh] flex justify-items-center ${currentVaraint=="notDefault"? "opacity-0" : "opacity-100"}`}>Please turn off dark mode</div>
           {/* icon */}
           <div
             className=" flex justify-center relative before:absolute before:bg-dark-grey before:h-56 before:w-56 before:-z-10 before:-bottom-16 before:rounded-full"
@@ -146,8 +147,8 @@ const Index = () => {
         )}
         {isDesktop && (
           <motion.div
-            className={`w-1/3 absolute h-screen right-10 break-words justify-items-center ${
-              hasClicked ? "text-[87px]" : "text-9xl"
+            className={`w-1/3 absolute h-screen right-10 break-normal justify-items-center ${
+              hasClicked ? "text-[87px] xl:text-[70px] md:text-[60px]" : "text-9xl xl:text-8xl"
             } font-bold text-black`}
             onMouseEnter={() => {
               setCurrentVariant("notDefault");
