@@ -5,7 +5,7 @@ const Options = () => {
   return (
     <div
       id="proxima"
-      className=" flex flex-col text-[#AA9E8B] text-sm font-bold tracking-wider gap-2 items-end border-2 border-orange z-40"
+      className=" flex flex-col text-[#AA9E8B] text-sm font-bold tracking-wider gap-2 items-end  z-40"
     >
       <div className="group transition ease-in-out">
         <Link
