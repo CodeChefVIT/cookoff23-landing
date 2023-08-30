@@ -37,13 +37,13 @@ const Countdown = () => {
     const interval = setInterval(calculateCountdown, 1000);
 
     return () => clearInterval(interval);
-  });
+  },[]);
 
   return (
-    <div className="min-h-[90vh] md:h-[70vh] w-[80vw] relative xs:my-10 flex flex-col gap-[10vh]">
+    <div className="min-h-[90vh] md:h-[70vh] w-[80vw] relative xs:-my-10 flex flex-col gap-[10vh] xs:gap-[2vh]">
       <div
         id="proxima"
-        className="uppercase text-[16px] md:text-[10px] mx-[17%] md:mx-[10%] text-[#B7AB98] mt-28 mb-10 tracking-[7px]"
+        className="uppercase text-[16px] md:text-[10px] mx-[17%] md:mx-[10%] text-[#B7AB98] mt-28 mb-10 xs:mb-6 tracking-[7px]"
       >
         Countdown
       </div>

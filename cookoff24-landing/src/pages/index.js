@@ -107,7 +107,7 @@ const Index = () => {
         )}
         {/* main flex */}
         <div className="flex flex-col justify-center justify-items-center gap-36 ">
-          <div className={`-mt-24 relative text-4xl font-semibold hover:opacity-0 text-black h-[15vh] flex justify-items-center ${currentVaraint=="notDefault"? "opacity-0" : "opacity-100"}`}>Please turn off dark mode</div>
+          <div className={`-mt-24 relative text-4xl font-semibold hover:opacity-0 text-black h-[15vh] flex justify-items-center xs:-mt-64 ${currentVaraint=="notDefault"? "opacity-0" : "opacity-100"}`}>Please turn off dark mode</div>
           {/* icon */}
           <div
             className=" flex justify-center relative before:absolute before:bg-dark-grey before:h-56 before:w-56 before:-z-10 before:-bottom-16 before:rounded-full"
