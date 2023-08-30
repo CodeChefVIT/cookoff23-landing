@@ -53,7 +53,7 @@ export default function Home() {
         <link rel="icon" href="/Favicon.png" />
       </Head>
           <FixedNav />
-      <main className="h-[1090vh] sm:h-[950vh] w-[100vw] relative cursor-default overflow-x-hidden">
+      <main className="h-[1090vh] sm:h-[810vh] w-[100vw] relative cursor-default overflow-x-hidden">
         <div className="absolute w-[100vw]">
           <Welcome />
           <About />
