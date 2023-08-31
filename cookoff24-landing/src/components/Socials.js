@@ -58,7 +58,7 @@ const Socials = () => {
           <TraingleSVG />
           <a href="https://clueminati.codechefvit.com" target="__blank" rel="noopener noreferrer" >
             <p className="text-4xl text-grey font-bold hover:text-orange hover:duration-100 xl:text-2xl">
-              ClueMinati
+              Clueminati
             </p>
           </a>
         </div>
