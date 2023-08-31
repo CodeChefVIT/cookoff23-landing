@@ -65,16 +65,16 @@ const Socials = () => {
 
         {isMobile && (
           <div className="flex items-center gap-3 mt-[5vh]">
-            <a href="https://github.com/CodeChefVIT">
+            <a href="https://github.com/CodeChefVIT" target="__blank" rel="noopener noreferrer" >
               <Image src={githubmark} alt="img" className="h-10 w-10" />
             </a>
-            <a href="https://www.instagram.com/codechefvit/T">
+            <a href="https://www.instagram.com/codechefvit/T" target="__blank" rel="noopener noreferrer" >
               <Image src={insta} alt="img" className="h-10 w-10" />
             </a>
-            <a href="https://twitter.com/codechefvit">
+            <a href="https://twitter.com/codechefvit" target="__blank" rel="noopener noreferrer" >
               <Image src={twitter} alt="img" className="h-10 w-10" />
             </a>
-            <a href="https://www.linkedin.com/company/codechef-vit-chapter/mycompany/">
+            <a href="https://www.linkedin.com/company/codechef-vit-chapter/mycompany/" target="__blank" rel="noopener noreferrer" >
               <Image src={linkedin} alt="img" className="h-10 w-10" />
             </a>
           </div>
