@@ -18,7 +18,7 @@ const About = () => {
           id="proxima"
           className="text-justify text-4xl tracking-wide font-bold leading-relaxed lg:text-2xl lg:tracking-wide lg:font-semibold sm:text-2xl sm:tracking-wide sm:font-semibold"
         >
-          cookoff is <span className="text-orange">CodeChef VIT</span>&apos;s annual competitive coding event which has been held consecutively for the past eight years. It is india’s largest competitive coding event where participants from all over the country come together to test their knowledge and skills to eventually emerge as an ultimate winner of this  8 hour long event. Participants would be required to solve problems of various complexities with the increase in the difficulty level with each round leading to an ultimate winner.
+          CookOff is <span className="text-orange">CodeChef-VIT</span>&apos;s annual competitive coding event which has been held consecutively for the past eight years. It is India&apos;s largest competitive coding event where participants from all over the country come together to test their knowledge and skills to eventually emerge as an ultimate winner of this  8 hour long event. Participants would be required to solve problems of various complexities with the increase in the difficulty level with each round leading to an ultimate winner.
         </p>
       </div>
     </div>

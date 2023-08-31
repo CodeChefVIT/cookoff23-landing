@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Welcome = () => {
   const isMid = useMediaQuery("(max-width:1012px)");
-  console.log("isMid" + isMid);
+  // console.log("isMid" + isMid);
 
   return (
     <div className="h-[100vh] w-[100vw] cursor-default flex flex-col justify-center sm:-mt-16" id="welcome">

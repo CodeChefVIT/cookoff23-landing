@@ -9,6 +9,7 @@ import linkedin from "../../public/linkedin.svg";
 import githubmark from "../../public/githubmark.svg";
 import twitter from "../../public/twitter.svg";
 import useMediaQuery from "@/hooks/useMediaQuery";
+// import {Link as Link2} from "next/link";
 const Socials = () => {
   const isMobile = useMediaQuery("(max-width:639px)");
 
@@ -19,17 +20,17 @@ const Socials = () => {
     >
       {/* <div className="flex ml-40 py-10 border-t-2 border-grey h-[57vh] gap-20 "> */}
 
-      <div className="flex flex-col justify-center lg:hidden">
+      <div className="flex flex-col justify-center lg:hidden w-1/">
         <ChefCapSVG />
       </div>
       <div className="flex flex-col justify-between py-20 items-center lg:py-2 sm:hidden">
-        <div className="text-lg font-normal tracking-[6px] mdl:tracking-[2px] text-grey ">
+        <div className="text-lg font-normal tracking-[6px] mdl:tracking-[2px] text-grey whitespace-nowrap">
           CODECHEF VIT
         </div>
-        <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey ">
+        <div className="text-lg font-normal tracking-[7px] mdl:tracking-[2px] text-grey whitespace-nowrap">
           COOKOFF 8.0
         </div>
-        <div className="z-10">
+        {/* <div className="z-10">
           <Link to="welcome" spy={true} smooth={true} offset={-5}>
             <motion.button
               className="rounded-[4px] w-[200px] py-2 px-12 bg-orange sm:bg-orange text-black sm:font-semibold font-bold sm:border-dark-grey hover:text-[#fff] text-[18px] md:text-[13px] hover:font-semibold"
@@ -39,7 +40,7 @@ const Socials = () => {
               Register
             </motion.button>
           </Link>
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-col py-20 lg:py-2">
         <div className="text-lg font-normal tracking-[7px] text-grey mdl:tracking-[2px]">
@@ -47,19 +48,19 @@ const Socials = () => {
         </div>
         <div className="flex pt-5 items-center gap-5 z-10">
           <TraingleSVG />
-          <Link href={"/landing"}>
+          <a href="https://techtalks.codechefvit.com" target="__blank" rel="noopener noreferrer" >
             <p className="text-4xl text-grey font-bold hover:text-orange hover:duration-100 xl:text-2xl">
               Tech Talks 4.0
             </p>
-          </Link>
+          </a>
         </div>
         <div className="flex pt-5 items-center gap-5 z-10">
           <TraingleSVG />
-          <Link href={"/landing"}>
+          <a href="https://clueminati.codechefvit.com" target="__blank" rel="noopener noreferrer" >
             <p className="text-4xl text-grey font-bold hover:text-orange hover:duration-100 xl:text-2xl">
               ClueMinati
             </p>
-          </Link>
+          </a>
         </div>
 
         {isMobile && (
@@ -87,7 +88,7 @@ const Socials = () => {
           <TraingleSVG />
           <Link to="welcome" spy={true} smooth={true} offset={-5}>
             <p className="text-4xl text-grey font-bold hover:text-orange hover:duration-100 xl:text-2xl">
-              Portal
+              About
             </p>
           </Link>
         </div>
@@ -95,7 +96,7 @@ const Socials = () => {
           <TraingleSVG />
           <Link to="about" spy={true} smooth={true} offset={-5}>
             <p className="text-4xl text-grey font-bold hover:text-orange hover:duration-100 xl:text-2xl">
-              About
+              Timeline
             </p>
           </Link>
         </div>
@@ -103,7 +104,7 @@ const Socials = () => {
           <TraingleSVG />
           <Link to="timeline" spy={true} smooth={true} offset={-5}>
             <p className="text-4xl text-grey font-bold hover:text-orange hover:duration-100 xl:text-2xl">
-              Timeline
+              Prizes
             </p>
           </Link>
         </div>

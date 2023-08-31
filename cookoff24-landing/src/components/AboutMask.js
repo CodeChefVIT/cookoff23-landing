@@ -31,7 +31,7 @@ const AboutMask = () => {
           id="proxima"
           className="text-justify text-4xl tracking-wide font-bold leading-relaxed lg:text-2xl lg:tracking-wide lg:font-semibold sm:text-2xl sm:tracking-wide sm:font-semibold"
         >
-          No, cookoff isn&apos;t your annual culinary challenge, in fact, it is one of codechef vit&apos;s largest competitive coding event. Join us for the ultimate showdown of brains and bytes where a combination of a battle of wits, an algorithmic apocalypse, and a laugh riot, all rolled into one welcomes you and keeps you on the edge of your seat. So whether you&apos;re a code sensei or a debugging diva, this competition is for you!
+          No, CookOff isn&apos;t your annual culinary challenge, in fact, it is one of CodeChef-VIT&apos;s largest competitive coding event. Join us for the ultimate showdown of brains and bytes where a combination of a battle of wits, an algorithmic apocalypse, and a laugh riot, all rolled into one welcomes you and keeps you on the edge of your seat. So whether you&apos;re a code sensei or a debugging diva, this competition is for you!
         </p>
       </div>
     </div>

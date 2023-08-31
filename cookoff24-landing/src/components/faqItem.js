@@ -1,7 +1,7 @@
 import { easeInOut, motion } from "framer-motion";
 import { useState } from "react";
 
-const Faqs = ({ question, answer }) => {
+const Faqs = ({ question, answer, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const handleHover = () => {
     setIsHovered(!isHovered);
@@ -10,6 +10,7 @@ const Faqs = ({ question, answer }) => {
   return (
     <>
       <motion.div
+        key={index}
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
         className={`${

@@ -9,7 +9,10 @@ const Prizes = () => {
     setIsHovered(hoverState);
   };
   return (
-    <div className="min-h-[100vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16 sm:min-h-[80vh]" id="prizes">
+    <div
+      className="min-h-[100vh] w-[100vw] text-grey flex flex-col items-start justify-between gap-[3.1rem] py-16 sm:min-h-[80vh]"
+      id="prizes"
+    >
       <div
         id="proxima"
         className="text-[16px] md:text-[12px] font-normal tracking-[7px] mx-[13%] md:mx-[10%] text-grey pt-2"
@@ -17,27 +20,12 @@ const Prizes = () => {
         PRIZES
       </div>
       <div>
-        <Awards
-          title="FIRST"
-          content="You’ll get like 1.5 Lakhs in cash, damm that's a lot of money. What
-            are you going to do with all? I’m gonna buy myself some doge."
-        />
-        <Awards
-          title="SECOND"
-          content="You’ll get like 1.5 Lakhs in cash, damm that’s a lot of money. What
-            are you going to do with all? I’m gonna buy myself some doge."
-        />
-        <Awards
-          title="THIRD"
-          content="You’ll get like 1.5 Lakhs in cash, damm that’s a lot of money. What
-            are you going to do with all? I’m gonna buy myself some doge."
-        />
-        <Awards
-          title="FRESHERS"
-          content="You’ll get like 1.5 Lakhs in cash, damm that’s a lot of money. What
-            are you going to do with all? I’m gonna buy myself some doge."
-        />
-        <div className="parent container relative">
+        <Awards title="FIRST" content="Coming Soon" />
+        <Awards title="SECOND" content="Coming Soon" />
+        <Awards title="THIRD" content="Coming Soon" />
+        <Awards title="FRESHERS" content="Coming Soon" />
+        <Awards title="WOMEN" content="Coming Soon" />
+        {/* <div className="parent container relative">
           <div className="text h-full w-[100vw] flex justify-between items-center">
             <p className="flex mx-[13%] md:mx-[10%] sm:mx-[0] text-8xl font-bold tracking-wide cursor-pointer md:text-xl lg:text-6xl text-center md:pl-10 justify-self-start">
               WOMEN
@@ -54,15 +42,15 @@ const Prizes = () => {
             <p className="text-8xl mx-[13%] md:mx-[10%] font-bold tracking-wide cursor-pointer md:text-xl lg:text-6xl text-center md:pl-10 justify-self-start text-orange">
               WOMEN
             </p>
-            {/* <p className="mx-[13%] md:mx-[10%] px-36 h-20 w-[45vw] lg:w-[55vw] text-lg tracking-wide text-orange md:text-xs md:px-0 xl:text-sm md:tracking-tight ">
+            <p className="mx-[13%] md:mx-[10%] px-36 h-20 w-[45vw] lg:w-[55vw] text-lg tracking-wide text-orange md:text-xs md:px-0 xl:text-sm md:tracking-tight ">
               You’ll get like 1.5 Lakhs in cash, damm that’s a lot of money.
               What are you going to do with all? I’m gonna buy myself some doge.
-            </p> */}
+            </p>
           </div>
           <div className="flex w-full justify-center">
             <div className="flex border-b-[2px] border-[#AA9E8B] opacity-50 w-[75%] md:w-full" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
