@@ -24,9 +24,7 @@ const Timeline = () => {
             <motion.div
               key={index}
               // className={`flex ml-40 h-[20%]`}
-              className={`flex justify-between mx-auto sm:ml-2 sm:gap-[20vw] xs:text-xl h-[${
-                Math.floor(100 / events.length)
-              }%] border-b-[2px] border-neutral-600 w-[75%] md:w-full gap-44 text-grey text-3xl font-semibold z-20 px-10`}
+              className={`flex justify-between mx-auto sm:ml-2 sm:gap-[20vw] xs:text-xl h-[16%] border-b-[2px] border-neutral-600 w-[75%] md:w-full gap-44 text-grey text-3xl font-semibold z-20 px-10`}
               whileHover={{
                 backgroundColor: "#EB5939",
                 color: "rgb(13,13,13)",
