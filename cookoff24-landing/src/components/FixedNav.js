@@ -9,7 +9,7 @@ import BurgerSVG from "./BurgerSVG";
 import { Link } from "react-scroll";
 
 const FixedNav = () => {
-  const isMobile = useMediaQuery("(max-width:639px)");
+  const isMobile = useMediaQuery("(max-width:780px)");
   const [isToggled, setIsToggled] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navbarRef = useRef(null);
