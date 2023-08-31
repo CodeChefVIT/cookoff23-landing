@@ -13,6 +13,7 @@ const Faqs = ({ question, answer, index }) => {
         key={index}
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
+        // onMouseDown={handleHover}
         className={`${
           isHovered
             ? `bg-[#eb5939] duration-300 pb-24 sm:pb-10`
