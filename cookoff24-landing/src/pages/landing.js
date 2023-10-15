@@ -30,6 +30,7 @@ export default function Home() {
     useAppContext();
 
   const isNotMobile = !useMediaQuery("(max-width:632px)");
+  const isMid = useMediaQuery("(min-width:770px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +54,11 @@ export default function Home() {
         <link rel="icon" href="/Favicon.png" />
       </Head>
           <FixedNav />
-      <main className="h-[1090vh] sm:h-[810vh] w-[100vw] relative cursor-default overflow-x-hidden">
+      <main 
+      // className="h-auto w-[100vw] relative cursor-default overflow-x-hidden"
+      className="h-[1150vh] xl:h-[1170vh] md:h-[1020vh] sm:h-[810vh] w-[100vw] relative cursor-default overflow-x-hidden"
+      // className="h-[1090vh] xl:h-[1200vh] md:h-[1050vh] sm:h-[810vh] w-[100vw] relative cursor-default overflow-x-hidden"
+      >
         <div className="absolute w-[100vw]">
           <Welcome />
           <About />
@@ -87,8 +92,9 @@ export default function Home() {
             <FillerMask2 />
             <FillerMask2 />
             <FillerMask2 />
+            {/* <FillerMask2 /> */}
             <FillerMask2 />
-            <FillerMask2 />
+            {isMid && <FillerMask2 />}
           </motion.div>
         )}
       </main>

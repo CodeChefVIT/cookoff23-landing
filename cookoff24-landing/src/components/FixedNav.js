@@ -9,7 +9,7 @@ import BurgerSVG from "./BurgerSVG";
 import { Link } from "react-scroll";
 
 const FixedNav = () => {
-  const isMobile = useMediaQuery("(max-width:639px)");
+  const isMobile = useMediaQuery("(max-width:780px)");
   const [isToggled, setIsToggled] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navbarRef = useRef(null);
@@ -79,7 +79,7 @@ const FixedNav = () => {
                 r="303.5"
                 fill="#EB5939"
                 stroke="black"
-                stroke-width="10"
+                strokeWidth="10"
               />
               <path
                 d="M308 142L221.397 292H394.603L308 142ZM293 277V475H323V277H293Z"

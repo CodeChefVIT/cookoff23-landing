@@ -6,7 +6,7 @@ const Awards = (props) => {
       {" "}
       <div className="parent container relative">
         <div className="mx-[13%] md:mx-[10%] w-[100vw]">
-          <div className="text w-[100vw] flex justify-start items-center">
+          <div className="text w-[100vw] flex justify-start items-center py-4">
             <p className="text-8xl font-bold tracking-wide lg:text-6xl cursor-pointer md:text-xl w-[30%] justify-self-start">
               {props.title}
             </p>
